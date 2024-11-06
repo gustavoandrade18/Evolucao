@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &448659370775863318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 448659370775863317}
+  - component: {fileID: 448659370775863316}
+  - component: {fileID: 448659370842363745}
+  - component: {fileID: 448659370842363751}
+  - component: {fileID: 448659370842363749}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &448659370775863317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &448659370775863316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8ed4c5f06fdbe4f80085b941d63726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetoPrefab: {fileID: 8361804821120802354, guid: de2e9c7511db9a4479c4dc8d5ef49f28, type: 3}
+  gelo: {fileID: 2166866741857577923, guid: 396fd5628fa460d4d9c6d78b55babcf7, type: 3}
+  intervaloSpawn: 5
+  raioSpawn: 80
+  pontoCentro: {fileID: 0}
+  foodOnScreen: 0
+  foodLimit: 5
+  geloLimit: 3
+  geloOnScreen: 0
+  geloCooldown: 60
+  geloDesdeUltimoSpawn: 0
+--- !u!114 &448659370842363745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d28bb1949a28c84d85ea286d1b7a624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  salva: {fileID: 11400000, guid: b5a12fbee43748e4ca3207d21975d456, type: 2}
+  childRaboNome: Rabo
+  childBocaNome: Boca
+  childOlhosNome: Olhos
+  childGuelrasNome: Guelras
+  prefabsModelo:
+  - {fileID: 5782458976093644175, guid: ee811468a76ac184590d61cc9a3bf24d, type: 3}
+  prefabsRabo:
+  - {fileID: 7003211025072054319, guid: eb2b6cf559704104a8f9d043db3b00f4, type: 3}
+  - {fileID: 7003211025072054319, guid: 7218a983311e3774481fc0b6ab6f8d52, type: 3}
+  prefabsBoca:
+  - {fileID: 2430817023866650263, guid: f770015317ba4f143a57d882f3d89152, type: 3}
+  - {fileID: 2882654885105224474, guid: 3f59af9eb2b063642ba657179c129911, type: 3}
+  - {fileID: 2430817023866650263, guid: e1db0e23f5332f04ea3bcef2e3fc113b, type: 3}
+  prefabsOlhos:
+  - {fileID: 2300323273493271174, guid: e8543d51915f3384e86192bf13156fcd, type: 3}
+  prefabsGuelras:
+  - {fileID: 960172307532907413, guid: 9c9da58ef1696ed49b111c8c07c8b6b8, type: 3}
+--- !u!114 &448659370842363751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8f1d816ad7e634580e18819e2b6115, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inimigoCarnivoro: 0
+  inimigoHerbivoro: 0
+  aliado: 0
+  prefabsInimigos:
+  - {fileID: 4668023493950496520, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+  prefabsRabo:
+  - {fileID: 7003211025072054319, guid: eb2b6cf559704104a8f9d043db3b00f4, type: 3}
+  - {fileID: 7003211025072054319, guid: 7218a983311e3774481fc0b6ab6f8d52, type: 3}
+  prefabsBocaCarnivora:
+  - {fileID: 2430817023866650263, guid: f770015317ba4f143a57d882f3d89152, type: 3}
+  - {fileID: 2882654885105224474, guid: 3f59af9eb2b063642ba657179c129911, type: 3}
+  prefabsBocaHerbivora:
+  - {fileID: 2430817023866650263, guid: e1db0e23f5332f04ea3bcef2e3fc113b, type: 3}
+  prefabsOlhos:
+  - {fileID: 2300323273493271174, guid: e8543d51915f3384e86192bf13156fcd, type: 3}
+  prefabsGuelras:
+  - {fileID: 960172307532907413, guid: 9c9da58ef1696ed49b111c8c07c8b6b8, type: 3}
+  childRaboNome: Rabo
+  childBocaNome: Boca
+  childOlhosNome: Olhos
+  childGuelrasNome: Guelras
+  player: {fileID: 0}
+  enemySpawned: 0
+  allySpawned: 1
+--- !u!114 &448659370842363749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ede2d03bf9dd5e4aaac65b0ca417dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thresholdPosition: {x: 0, y: 0}
+  thresholdDistanceX: 94
+  thresholdDistanceY: 37
+  randomOffsetRangeX: 60
+  randomOffsetRangeY: 30

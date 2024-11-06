@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1703626944971900874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.39067417
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.166136
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 25095083329443964, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291408229548441845, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_Name
+      value: Criatura Unicelular Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 867415660813193505, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+    - {fileID: 6702384740702775106, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+    - {fileID: 867415660813193526, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+    - {fileID: 3541618606888206878, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+--- !u!1 &6830452181255440191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5291408229548441845, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+  m_PrefabInstance: {fileID: 1703626944971900874}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8801632181249539638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6830452181255440191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cf2c771dad6ca41b61f7df93c2063c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  vidaTotal: 100
+  vida: 0
+  vidaText: {fileID: 0}
+  onTriggerBoca: {fileID: 0}
+  objetoPrefab: {fileID: 8361804821120802354, guid: 0f29f9ef6e95ca045b5b37216c6ae675, type: 3}
+  pontoCentro: {fileID: 3708564044628496842, guid: 7252f3fa118af014ebbb86cff3fba157, type: 3}
+  foodAmount: 3
+  carnivoro: 0
+  player: {fileID: 5530854994684541851, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+  playerDistance: {x: 0, y: 0}
+  maxDistance: 25
+  speed: 10
+  detectionRange: 1
+  velocidadeRotacao: 5
+  oxigenioMax: 0
+  oxigenio: 0
+  walkSpeed: 0
+  sprintSpeed: 0
+  targetPosition: {x: 0, y: 0}
+  advancedBeheavior: 1
