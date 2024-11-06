@@ -23,9 +23,17 @@ public int[] bocaNumero = new int[3];
 public int[] raboNumero = new int[3];
 public int[] olhoNumero = new int[3];
 public int[] guelrasNumero = new int[3];
+//spawna o corpo 
+public GameObject[] prefabsCorpo; // Array para armazenar os prefabs com nome "Corpo"
+public int[] corpoNumero = new int [3];
+
+public string[] tags; // Array para armazenar as tags correspondentes
+
+public Vector3[] posicoes; // Array para armazenar as posições correspondentes
 
     void Start()
     {
+        CriaCorpo();
         while(criaturaNumber <= 2)
         {
         // Seleciona um prefab aleatório para o rabo
@@ -97,6 +105,21 @@ public int[] guelrasNumero = new int[3];
             GameObject newChild = Instantiate(prefab, position, rotation);
             // Define o novo prefab como filho do GameObject player
             newChild.transform.SetParent(criatura[criaturaNumber].transform);
+        }
+    }
+    void CriaCorpo()
+    {
+        int indiceAleatorio = Random.Range(0, prefabsCorpo.Length);
+        for (int i = 0; i < 3; i++)
+        {
+            corpoNumero[i] = indiceAleatorio;
+            // Verifica se o nome do prefab começa com "Corpo"
+            if (prefabsCorpo[indiceAleatorio] != null)
+            {
+                // Instancia o prefab, define a posição e a tag
+                GameObject instancia = Instantiate(prefabsCorpo[indiceAleatorio], posicoes[i], Quaternion.identity);
+                instancia.tag = tags[i];
+            }
         }
     }
 }

@@ -14,6 +14,7 @@ public class SelecionarButton : MonoBehaviour
      salva.boca = caracteristicas.bocaNumero[0];
      salva.olhos = caracteristicas.olhoNumero[0];
      salva.guelras = caracteristicas.guelrasNumero[0];
+     salva.corpo = caracteristicas.corpoNumero[0];
      SceneManager.LoadScene("Teste de Mecanicas");
 
    }
@@ -23,6 +24,7 @@ public class SelecionarButton : MonoBehaviour
      salva.boca = caracteristicas.bocaNumero[1];
      salva.olhos = caracteristicas.olhoNumero[1];
      salva.guelras = caracteristicas.guelrasNumero[1];
+     salva.corpo = caracteristicas.corpoNumero[1];
      SceneManager.LoadScene("Teste de Mecanicas");
    }
     public void Selecionar3()
@@ -31,6 +33,7 @@ public class SelecionarButton : MonoBehaviour
      salva.boca = caracteristicas.bocaNumero[2];
      salva.olhos = caracteristicas.olhoNumero[2];
      salva.guelras = caracteristicas.guelrasNumero[2];
+     salva.corpo = caracteristicas.corpoNumero[2];
      SceneManager.LoadScene("Teste de Mecanicas");
    }
 }

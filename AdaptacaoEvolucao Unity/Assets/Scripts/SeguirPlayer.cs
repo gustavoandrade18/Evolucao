@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeguirPlayer : MonoBehaviour
 {
-    public Transform player;  // Referência ao Transform do player
+    public GameObject player; // Referência ao Transform do player
     public Vector3 offset;    // Distância fixa entre a câmera e o player
 
     void Start()
@@ -14,11 +14,12 @@ public class SeguirPlayer : MonoBehaviour
     }
 
     void LateUpdate()
-    {
-        // Atualiza a posição da câmera, mantendo o offset
-        transform.position = player.position + offset;
-
-        // Opcional: manter a rotação da câmera fixa (por exemplo, a rotação inicial)
-        transform.rotation = Quaternion.identity; // Mantém a rotação zerada
+    { 
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        } 
+       Vector3 newPosition = player.transform.position + offset;
+       transform.position = newPosition;
     }
 }

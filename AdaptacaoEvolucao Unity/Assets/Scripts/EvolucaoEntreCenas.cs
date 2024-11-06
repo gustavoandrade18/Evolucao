@@ -10,6 +10,6 @@ public class EvolucaoEntreCenas : ScriptableObject
     public int boca;
     public int olhos;
     public int guelras;
-    public int modelo = 0;
+    public int corpo;
     
 }

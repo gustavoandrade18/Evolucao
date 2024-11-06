@@ -18,7 +18,7 @@ public class GeraCaracteristicas : MonoBehaviour
     public GameObject[] prefabsOlhos; // Array de prefabs dos olhos
     public GameObject[] prefabsGuelras; // Array de prefabs das guelras
     //
-    GameObject prefabModelo;
+    GameObject prefabCorpo;
     GameObject prefabRabo;
     GameObject prefabGuelras;
     GameObject prefabBoca;
@@ -35,9 +35,8 @@ public class GeraCaracteristicas : MonoBehaviour
         // Pega o script de spawn
         npcSpawn = GameObject.Find("SpawnManager").GetComponent<NpcSpawn>();
         //
-        player = GameObject.FindGameObjectWithTag("Player");
 
-        prefabModelo = prefabsModelo[salva.modelo];
+        prefabCorpo = prefabsModelo[salva.corpo];
         // Pega a carcteristica ja selocinada pelo player
         prefabRabo = prefabsRabo[salva.rabo];
         // Seleciona um prefab aleatório para o guelras
@@ -46,6 +45,13 @@ public class GeraCaracteristicas : MonoBehaviour
         prefabBoca = prefabsBoca[salva.boca];
         // Seleciona um prefab aleatório para o olhos
         prefabOlhos = prefabsOlhos[salva.olhos];
+        GameObject playerPrefab = Instantiate(prefabCorpo, new Vector3(0, 0, 0), Quaternion.identity);
+        playerPrefab.tag = "Player";
+        Movimento movimento = playerPrefab.GetComponent<Movimento>();
+        movimento.enabled = true;
+        
+        player = GameObject.FindGameObjectWithTag("Player");
+
 
         if (player != null)
         {
@@ -76,7 +82,7 @@ public class GeraCaracteristicas : MonoBehaviour
     {
         if(npcSpawn.allySpawned)
         {
-            GameObject aliado = Instantiate(prefabModelo, GetRandomSpawnPosition(), Quaternion.identity);
+            GameObject aliado = Instantiate(prefabCorpo, GetRandomSpawnPosition(), Quaternion.identity);
             Transform childRabo = aliado.transform.Find(childRaboNome);
             Transform childBoca = aliado.transform.Find(childBocaNome);
             Transform childOlhos = aliado.transform.Find(childOlhosNome);
