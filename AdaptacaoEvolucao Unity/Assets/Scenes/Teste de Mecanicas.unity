@@ -1362,7 +1362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: prefabsBoca.Array.size
@@ -1375,7 +1375,7 @@ PrefabInstance:
     - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: prefabsModelo.Array.data[0]
       value: 
-      objectReference: {fileID: 7340978536450899535, guid: b47607912e303e543a6327d41b15ae20, type: 3}
+      objectReference: {fileID: 6171937961376106134, guid: b47607912e303e543a6327d41b15ae20, type: 3}
     - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: player
       value: 

@@ -870,14 +870,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabsRabo:
-  - {fileID: 7003211025072054319, guid: eb2b6cf559704104a8f9d043db3b00f4, type: 3}
-  - {fileID: 7003211025072054319, guid: 7218a983311e3774481fc0b6ab6f8d52, type: 3}
+  - {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
+  - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
   prefabsBoca:
   - {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
   prefabsOlhos:
-  - {fileID: 2300323273493271174, guid: e8543d51915f3384e86192bf13156fcd, type: 3}
+  - {fileID: 745039988511243743, guid: 756720d20b7171e4ab709e67278ada3c, type: 3}
   prefabsGuelras:
-  - {fileID: 960172307532907413, guid: 9c9da58ef1696ed49b111c8c07c8b6b8, type: 3}
+  - {fileID: 8851411522347403986, guid: 6ab209c88dbaecb45b28ef7451194e58, type: 3}
   childRaboNome: Rabo
   childBocaNome: Boca
   childOlhosNome: Olhos
@@ -888,16 +888,16 @@ MonoBehaviour:
   olhoNumero: 000000000000000000000000
   guelrasNumero: 000000000000000000000000
   prefabsCorpo:
-  - {fileID: 7340978536450899535, guid: b47607912e303e543a6327d41b15ae20, type: 3}
+  - {fileID: 6171937961376106134, guid: b47607912e303e543a6327d41b15ae20, type: 3}
   corpoNumero: 000000000000000000000000
   tags:
   - Criatura0
   - Criatura1
   - Criatura2
   posicoes:
-  - {x: -6.2, y: 0, z: 0}
+  - {x: -9, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  - {x: 6.2, y: 0, z: 0}
+  - {x: 9, y: 0, z: 0}
 --- !u!4 &1446166161
 Transform:
   m_ObjectHideFlags: 0
@@ -1248,7 +1248,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
