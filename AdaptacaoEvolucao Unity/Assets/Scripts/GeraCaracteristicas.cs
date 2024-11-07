@@ -17,8 +17,10 @@ public class GeraCaracteristicas : MonoBehaviour
     public GameObject[] prefabsBoca; // Array de prefabs da boca
     public GameObject[] prefabsOlhos; // Array de prefabs dos olhos
     public GameObject[] prefabsGuelras; // Array de prefabs das guelras
+    public GameObject[] prefabsModeloAlly;
     //
     GameObject prefabCorpo;
+    GameObject prefabCorpoAlly;
     GameObject prefabRabo;
     GameObject prefabGuelras;
     GameObject prefabBoca;
@@ -37,6 +39,7 @@ public class GeraCaracteristicas : MonoBehaviour
         //
 
         prefabCorpo = prefabsModelo[salva.corpo];
+        prefabCorpoAlly = prefabsModeloAlly[salva.corpo];
         // Pega a carcteristica ja selocinada pelo player
         prefabRabo = prefabsRabo[salva.rabo];
         // Seleciona um prefab aleatório para o guelras
@@ -82,12 +85,12 @@ public class GeraCaracteristicas : MonoBehaviour
     {
         if(npcSpawn.allySpawned)
         {
-            GameObject aliado = Instantiate(prefabCorpo, GetRandomSpawnPosition(), Quaternion.identity);
+            GameObject aliado = Instantiate(prefabCorpoAlly, GetRandomSpawnPosition(), Quaternion.identity);
             Transform childRabo = aliado.transform.Find(childRaboNome);
             Transform childBoca = aliado.transform.Find(childBocaNome);
             Transform childOlhos = aliado.transform.Find(childOlhosNome);
             Transform childGuelras = aliado.transform.Find(childGuelrasNome);
-             // Substitui o rabo
+            // Substitui o rabo
             ReplaceChild(childRabo, prefabRabo, aliado);
         
             // Substitui a boca
@@ -101,7 +104,6 @@ public class GeraCaracteristicas : MonoBehaviour
 
             npcSpawn.allySpawned = false;
         }
-        
     }
 
     void ReplaceChild(Transform child, GameObject prefab, GameObject criatura)

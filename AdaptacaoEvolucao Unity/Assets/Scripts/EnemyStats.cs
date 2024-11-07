@@ -49,12 +49,12 @@ public class EnemyStats : MonoBehaviour
         
         
         // Configura o texto canvas do inimigo
-        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        /*canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         vidaPrefab = canvas.transform.Find("Vida").GetComponent<TMP_Text>();
         vidaText = Instantiate(vidaPrefab);
         vidaText.transform.SetParent(canvas.transform, false);
         followGameObject = vidaText.GetComponent<FollowGameObject>();
-        followGameObject.inimigoObject =  this.gameObject;
+        followGameObject.inimigoObject =  this.gameObject;*/
 
         //
         player = GameObject.FindGameObjectWithTag("Player");

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3552229318446491107}
   - component: {fileID: -3612356988785819351}
+  - component: {fileID: 8711225467211165715}
   m_Layer: 0
   m_Name: Tentaculo
   m_TagString: Untagged
@@ -84,3 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8711225467211165715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973948840533287100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4fd7b44417fed49b0f962e47754a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  oxigenioMax: 0
+  tempo: 0
+  visao: 0
+  oxigenioInimigo: 0

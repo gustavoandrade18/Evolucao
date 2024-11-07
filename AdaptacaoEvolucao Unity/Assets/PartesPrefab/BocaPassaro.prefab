@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6056262628516353562}
   - component: {fileID: -1141540065456765116}
   - component: {fileID: -1931336154907228683}
+  - component: {fileID: 4446853732781741909}
   m_Layer: 0
   m_Name: BocaPassaro
-  m_TagString: Untagged
+  m_TagString: BocaPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,10 +104,36 @@ MonoBehaviour:
   sizeIncrease: 2
   boxCollider: {fileID: 0}
   boxColliderI: {x: 0, y: 0}
-  carnivoro: 1
+  carnivoro: 0
   enemyStats: {fileID: 0}
-  dano: 0
+  dano: 4
   cooldown: 0
   fugidinha: 0
   fugidinhaCooldown: 0
   player: {fileID: 0}
+--- !u!61 &4446853732781741909
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5126606884050977878}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0372566, y: 0.81616586}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4773902, y: 0.4}
+    oldSize: {x: 4.9625, y: 7.01875}
+    newSize: {x: 7.94, y: 11.23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.79526794, y: 1.5503572}
+  m_EdgeRadius: 0

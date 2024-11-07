@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7337067012563464913}
   - component: {fileID: 1495603923320659662}
+  - component: {fileID: 716610096389897888}
   m_Layer: 0
   m_Name: BarbatanaTuba
-  m_TagString: Untagged
+  m_TagString: Rabo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +85,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &716610096389897888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708773772949853329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4fd7b44417fed49b0f962e47754a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 14
+  oxigenioMax: 0
+  tempo: 0
+  visao: 0
+  oxigenioInimigo: 0

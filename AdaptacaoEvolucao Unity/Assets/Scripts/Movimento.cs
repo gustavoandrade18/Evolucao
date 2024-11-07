@@ -67,12 +67,15 @@ public class Movimento : MonoBehaviour
     void Start()
     {
         Canvas canvas = FindObjectOfType<Canvas>();
-        vidaText = canvas.transform.Find("Vida").GetComponent<TMP_Text>();
+        if (vidaText == null) 
+        {
+        vidaText = canvas.transform.Find("Vida").GetComponent<TMP_Text>();  
         oxigenioText = canvas.transform.Find("Oxigenio").GetComponent<TMP_Text>();
         fomeText = canvas.transform.Find("Fome").GetComponent<TMP_Text>();
         temperaturaText = canvas.transform.Find("Temperatura").GetComponent<TMP_Text>();
         expText = canvas.transform.Find("Exp").GetComponent<TMP_Text>();
         levelText = canvas.transform.Find("Level").GetComponent<TMP_Text>();
+        }
         //
         walkSpeed = speed;
         sprintSpeed = speed * 2;

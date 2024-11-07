@@ -25,12 +25,17 @@ public class NpcSpawn : MonoBehaviour
     public string childGuelrasNome = "Guelras"; // Nome do objeto filho que será substituído para as guelras
 
     public GameObject player;
+    public float cooldownSpawn =10f;
 
     public bool enemySpawned=false;
     public bool allySpawned;
     public bool gerarCaracteristicas = true;
 
     GameObject prefabBoca;
+    //
+    EnemyStats enemyStats;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,10 +45,15 @@ public class NpcSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        } 
+
         if(inimigoCarnivoro < 2)
         {
             tempoSpawnCarnivoro += Time.deltaTime;
-            if(tempoSpawnCarnivoro>10f)
+            if(tempoSpawnCarnivoro>cooldownSpawn)
             {
                 carnivoro = true;
                 SpawnInimigo();
@@ -54,10 +64,10 @@ public class NpcSpawn : MonoBehaviour
         if(inimigoHerbivoro < 2)
         {
             tempoSpawnHerbivoro += Time.deltaTime;
-            if(tempoSpawnHerbivoro>10f)
+            if(tempoSpawnHerbivoro>cooldownSpawn)
             {
                 carnivoro = false;
-                SpawnInimigo();
+                SpawnInimigo(); 
                 inimigoHerbivoro++;
                 tempoSpawnHerbivoro=0f;
             }
@@ -70,6 +80,8 @@ public class NpcSpawn : MonoBehaviour
         // Escolhe um prefab aleatório de inimigo
         int randomIndex = Random.Range(0, prefabsInimigos.Length);
         GameObject novoInimigo = Instantiate(prefabsInimigos[randomIndex], GetRandomSpawnPosition(), Quaternion.identity);
+        enemyStats = novoInimigo.GetComponent<EnemyStats>();
+        enemyStats.enabled = true;
 
         // Modifica as características do novo inimigo
         if(gerarCaracteristicas)

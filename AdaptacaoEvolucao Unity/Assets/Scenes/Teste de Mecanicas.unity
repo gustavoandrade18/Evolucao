@@ -1309,6 +1309,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: raioSpawn
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: pontoCentro
       value: 
       objectReference: {fileID: 0}
@@ -1369,21 +1373,81 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsRabo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: prefabsBoca.Array.data[0]
       value: 
       objectReference: {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
     - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsRabo.Array.data[0]
+      value: 
+      objectReference: {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
+    - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsRabo.Array.data[1]
+      value: 
+      objectReference: {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
+    - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsOlhos.Array.data[0]
+      value: 
+      objectReference: {fileID: 745039988511243743, guid: 756720d20b7171e4ab709e67278ada3c, type: 3}
+    - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: prefabsModelo.Array.data[0]
       value: 
       objectReference: {fileID: 6171937961376106134, guid: b47607912e303e543a6327d41b15ae20, type: 3}
+    - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsGuelras.Array.data[0]
+      value: 
+      objectReference: {fileID: 8851411522347403986, guid: 6ab209c88dbaecb45b28ef7451194e58, type: 3}
+    - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsModeloAlly.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448659370842363745, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsModeloAlly.Array.data[0]
+      value: 
+      objectReference: {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
     - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: cooldownSpawn
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: gerarCaracteristicas
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsRabo.Array.data[0]
+      value: 
+      objectReference: {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsRabo.Array.data[1]
+      value: 
+      objectReference: {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsOlhos.Array.data[0]
+      value: 
+      objectReference: {fileID: 745039988511243743, guid: 756720d20b7171e4ab709e67278ada3c, type: 3}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsGuelras.Array.data[0]
+      value: 
+      objectReference: {fileID: 8851411522347403986, guid: 6ab209c88dbaecb45b28ef7451194e58, type: 3}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsInimigos.Array.data[0]
+      value: 
+      objectReference: {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: prefabsBocaHerbivora.Array.data[0]
+      value: 
+      objectReference: {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
 --- !u!1001 &2105875243512814916
@@ -1396,6 +1460,10 @@ PrefabInstance:
     - target: {fileID: 2105875243803043128, guid: 17183ced05594534382ea92c7215924e, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105875243803043131, guid: 17183ced05594534382ea92c7215924e, type: 3}
+      propertyPath: orthographic size
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2105875243803043268, guid: 17183ced05594534382ea92c7215924e, type: 3}
       propertyPath: m_RootOrder
@@ -1460,16 +1528,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195373637, guid: 4636da8e85611954799e06e0093ebe63, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -490
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1195373637, guid: 4636da8e85611954799e06e0093ebe63, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 120
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 1195373638, guid: 4636da8e85611954799e06e0093ebe63, type: 3}
       propertyPath: inimigoObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 837660133}
     - target: {fileID: 1195373640, guid: 4636da8e85611954799e06e0093ebe63, type: 3}
       propertyPath: m_margin.z
       value: -85.57392
@@ -1562,5 +1630,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1195373638, guid: 4636da8e85611954799e06e0093ebe63, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4636da8e85611954799e06e0093ebe63, type: 3}

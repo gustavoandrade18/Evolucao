@@ -8,7 +8,11 @@ public class ObjectStats : MonoBehaviour
     private Movimento movimento;
     private EnemyStats enemyStats;
     public float speed;
+    public int oxigenioMax;
     public float tempo;
+    public float visao;
+    Camera mainCamera;
+    public float oxigenioInimigo;
     void Start()
     {
     
@@ -23,23 +27,32 @@ public class ObjectStats : MonoBehaviour
         }
         if(tempo >= 0.1f && tempo<=0.5f)
         {
-        MonoBehaviour parentScript = null;
-        if (transform.parent.tag == "Player")
-        {
-            parentScript = transform.parent.GetComponent<Movimento>();
-        }
-        else if (transform.parent.tag == "Inimigo")
-        {
-            parentScript = transform.parent.GetComponent<EnemyStats>();
-        }
+            MonoBehaviour parentScript = null;
+            if (transform.parent.tag == "Player")
+            {
+                parentScript = transform.parent.GetComponent<Movimento>();
+            }
+            else if (transform.parent.tag == "Inimigo")
+            {
+                parentScript = transform.parent.GetComponent<EnemyStats>();
+            }
 
-        // Verifica se este objeto tem a tag "Rabo" e se encontrou um script
-        if (CompareTag("Rabo") && parentScript != null)
-        {
-            SetSpeed(parentScript);
-            Destroy(this); // Destrói o script após modificar a velocidade
-        }
-            
+            // Verifica se este objeto tem a tag "Rabo" e se encontrou um script
+            if (CompareTag("Rabo") && parentScript != null)
+            {
+                SetSpeed(parentScript);
+                Destroy(this); // Destrói o script após modificar a velocidade
+            }
+            if (CompareTag("Guelra") && parentScript != null)
+            {
+                SetOxigen(parentScript);
+                Destroy(this); // Destrói o script após modificar o oxigenio
+            }
+            if (CompareTag("Olho") && parentScript != null)
+            {
+                mainCamera = Camera.main;
+                mainCamera.orthographicSize = visao;
+            }
         }
     }
 
@@ -51,6 +64,7 @@ public class ObjectStats : MonoBehaviour
             movScript.speed = speed;
             movScript.walkSpeed = speed;
             movScript.sprintSpeed = speed * 2;
+
         }
         else if (myScript is EnemyStats)
         {
@@ -59,7 +73,21 @@ public class ObjectStats : MonoBehaviour
             enemyScript.walkSpeed = speed;
             enemyScript.sprintSpeed = speed * 2;
         }
-}
+    }
+    void SetOxigen(MonoBehaviour myScript)
+    {
+        if (myScript is Movimento)
+        {
+            Movimento movScript = (Movimento)myScript;
+            movScript.oxigenioMax = oxigenioMax;
+
+        }
+        else if (myScript is EnemyStats)
+        {
+            EnemyStats enemyScript = (EnemyStats)myScript;
+            enemyScript.oxigenio = oxigenioInimigo;
+        }
+        }
 }
 
 

@@ -16,6 +16,8 @@ TagManager:
   - Carne
   - Aliado
   - Bubble
+  - Guelra
+  - Olho
   layers:
   - Default
   - TransparentFX
