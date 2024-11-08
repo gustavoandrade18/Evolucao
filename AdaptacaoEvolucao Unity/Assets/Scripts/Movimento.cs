@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 
 public class Movimento : MonoBehaviour
 {
@@ -30,8 +31,9 @@ public class Movimento : MonoBehaviour
     public float vidaTotal=100.0f;
     public float vida;
     public float vidaAcressimo = 20f;
-    private int porcentagem;
-    public TMP_Text vidaText;
+    public Image vidaImage;
+    public Image vidaImageInstance;
+    public Image hpImage;
     public TMP_Text gameOver;
     //variaveis do void Playerstats (fome)
     public float fome;
@@ -66,16 +68,16 @@ public class Movimento : MonoBehaviour
 
     void Start()
     {
-        Canvas canvas = FindObjectOfType<Canvas>();
-        if (vidaText == null) 
-        {
-        vidaText = canvas.transform.Find("Vida").GetComponent<TMP_Text>();  
+        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        vidaImageInstance = Instantiate(vidaImage);
+        vidaImageInstance.transform.SetParent(canvas.transform, false);
+        hpImage = vidaImageInstance.transform.Find("Hp")?.GetComponent<Image>();
+
         oxigenioText = canvas.transform.Find("Oxigenio").GetComponent<TMP_Text>();
         fomeText = canvas.transform.Find("Fome").GetComponent<TMP_Text>();
         temperaturaText = canvas.transform.Find("Temperatura").GetComponent<TMP_Text>();
         expText = canvas.transform.Find("Exp").GetComponent<TMP_Text>();
         levelText = canvas.transform.Find("Level").GetComponent<TMP_Text>();
-        }
         //
         walkSpeed = speed;
         sprintSpeed = speed * 2;
@@ -141,10 +143,9 @@ public class Movimento : MonoBehaviour
         }
 
         //vida
-        porcentagem = Mathf.FloorToInt(vida/(vidaTotal/100));
-        if(vidaText != null)
+        if(hpImage != null)
         {
-            vidaText.text= "Vida:" + porcentagem + "%";
+            hpImage.fillAmount = vida/100f;
         }
         if(vida <=0)
         {

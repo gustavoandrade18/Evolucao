@@ -14,7 +14,7 @@ public class EnemyStats : MonoBehaviour
     public OnTriggerBoca onTriggerBoca;
     public GameObject objetoPrefab;
     NpcSpawn npcSpawn;
-    TMP_Text vidaPrefab;
+    public TMP_Text vidaPrefab;
     FollowGameObject followGameObject;
     OutOfBounds outOfBounds;
     //spawn da comida variavel
@@ -31,7 +31,7 @@ public class EnemyStats : MonoBehaviour
     public float detectionRange = 1f;
     public float velocidadeRotacao=5.0f;
     private Vector2 move;
-    Vector2 dectionVector;
+    public Vector2 dectionVector;
     public float oxigenioMax;
     public float oxigenio;
     public float walkSpeed;
@@ -42,6 +42,8 @@ public class EnemyStats : MonoBehaviour
     private Vector2 posicaoInicial;
     float targetRange=50.0f;
     public bool advancedBeheavior = true;
+    //
+    public bool partesStatus;
     // Start is called before the first frame update
     void Start()
     {   
@@ -49,18 +51,17 @@ public class EnemyStats : MonoBehaviour
         
         
         // Configura o texto canvas do inimigo
-        /*canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        vidaPrefab = canvas.transform.Find("Vida").GetComponent<TMP_Text>();
+        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         vidaText = Instantiate(vidaPrefab);
         vidaText.transform.SetParent(canvas.transform, false);
         followGameObject = vidaText.GetComponent<FollowGameObject>();
-        followGameObject.inimigoObject =  this.gameObject;*/
+        followGameObject.inimigoObject =  this.gameObject;
+        
 
         //
         player = GameObject.FindGameObjectWithTag("Player");
         vida = vidaTotal;
         EnemyStat();
-        dectionVector = new Vector2(detectionRange,detectionRange);
         targetPosition = Random.insideUnitCircle.normalized;
         walkSpeed = speed;
         sprintSpeed = speed * 2;
@@ -70,6 +71,13 @@ public class EnemyStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        if( partesStatus== true )
+        {
+            dectionVector = new Vector2(detectionRange,detectionRange);
+            oxigenio = oxigenioMax;
+            partesStatus = false;
+        }
+
         invencibilidade += Time.deltaTime;
         tempo += Time.deltaTime;
         EnemyStat();

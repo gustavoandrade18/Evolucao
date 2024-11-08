@@ -12,10 +12,10 @@ public class SpeciesAlly : MonoBehaviour
     public float velocidadeRotacao=5.0f;
     public float speed = 10f;
     Movimento movimento;
-    GameObject player;
+    public GameObject player;
     float distanciaMinima=10f;
     float tempo;
-    TMP_Text textoPrefab;
+    public TMP_Text textoPrefab;
     TMP_Text allyText;
     FollowGameObject followGameObject;
     NpcSpawn npcSpawn;
@@ -25,7 +25,6 @@ public class SpeciesAlly : MonoBehaviour
         
         // Canvas
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        textoPrefab = canvas.transform.Find("Vida").GetComponent<TMP_Text>();
         allyText = Instantiate(textoPrefab);
         allyText.transform.SetParent(canvas.transform, false);
         followGameObject = allyText.GetComponent<FollowGameObject>();
@@ -34,14 +33,17 @@ public class SpeciesAlly : MonoBehaviour
 
         targetPosition = Random.insideUnitCircle.normalized;
 
-        player = GameObject.Find("Player");
-        movimento = player.GetComponent<Movimento>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            movimento = player.GetComponent<Movimento>();
+        }
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
         if(distance < distanciaMinima && movimento.reproduzir == true && movimento.level >= 1)

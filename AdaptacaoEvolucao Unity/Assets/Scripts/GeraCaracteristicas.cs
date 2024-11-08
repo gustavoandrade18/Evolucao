@@ -29,6 +29,7 @@ public class GeraCaracteristicas : MonoBehaviour
     private GameObject player;
     NpcSpawn npcSpawn;
     GameObject ally;
+    SpeciesAlly speciesAlly;
     
     
     // Start is called before the first frame update
@@ -37,7 +38,7 @@ public class GeraCaracteristicas : MonoBehaviour
         // Pega o script de spawn
         npcSpawn = GameObject.Find("SpawnManager").GetComponent<NpcSpawn>();
         //
-
+    
         prefabCorpo = prefabsModelo[salva.corpo];
         prefabCorpoAlly = prefabsModeloAlly[salva.corpo];
         // Pega a carcteristica ja selocinada pelo player
@@ -86,6 +87,9 @@ public class GeraCaracteristicas : MonoBehaviour
         if(npcSpawn.allySpawned)
         {
             GameObject aliado = Instantiate(prefabCorpoAlly, GetRandomSpawnPosition(), Quaternion.identity);
+            speciesAlly = aliado.GetComponent<SpeciesAlly>();
+            aliado.tag = "Aliado";
+            speciesAlly.enabled = true;
             Transform childRabo = aliado.transform.Find(childRaboNome);
             Transform childBoca = aliado.transform.Find(childBocaNome);
             Transform childOlhos = aliado.transform.Find(childOlhosNome);

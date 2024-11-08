@@ -184,6 +184,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: vidaImage
+      value: 
+      objectReference: {fileID: 6722870603270041151, guid: 70530cfd991bdd0428729796dce487ce, type: 3}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: oxigenioMax
       value: 30
       objectReference: {fileID: 0}

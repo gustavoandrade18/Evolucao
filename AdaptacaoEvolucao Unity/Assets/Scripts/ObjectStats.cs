@@ -13,6 +13,7 @@ public class ObjectStats : MonoBehaviour
     public float visao;
     Camera mainCamera;
     public float oxigenioInimigo;
+    public float enemyDetection;
     void Start()
     {
     
@@ -50,8 +51,8 @@ public class ObjectStats : MonoBehaviour
             }
             if (CompareTag("Olho") && parentScript != null)
             {
-                mainCamera = Camera.main;
-                mainCamera.orthographicSize = visao;
+                SetVision(parentScript);
+                Destroy(this);
             }
         }
     }
@@ -64,7 +65,7 @@ public class ObjectStats : MonoBehaviour
             movScript.speed = speed;
             movScript.walkSpeed = speed;
             movScript.sprintSpeed = speed * 2;
-
+            
         }
         else if (myScript is EnemyStats)
         {
@@ -72,6 +73,7 @@ public class ObjectStats : MonoBehaviour
             enemyScript.speed = speed;
             enemyScript.walkSpeed = speed;
             enemyScript.sprintSpeed = speed * 2;
+            enemyScript.partesStatus = true;
         }
     }
     void SetOxigen(MonoBehaviour myScript)
@@ -85,9 +87,24 @@ public class ObjectStats : MonoBehaviour
         else if (myScript is EnemyStats)
         {
             EnemyStats enemyScript = (EnemyStats)myScript;
-            enemyScript.oxigenio = oxigenioInimigo;
+            enemyScript.oxigenioMax = oxigenioInimigo;
+            enemyScript.partesStatus = true;
         }
+    }
+    void SetVision(MonoBehaviour myScript)
+    {
+        if (myScript is Movimento)
+        {
+            mainCamera = Camera.main;
+            mainCamera.orthographicSize = visao;
         }
+        else if (myScript is EnemyStats)
+        {
+            EnemyStats enemyScript = (EnemyStats)myScript;
+            enemyScript.detectionRange = enemyDetection;
+            enemyScript.partesStatus = true;
+        }
+    }
 }
 
 

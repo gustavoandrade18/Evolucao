@@ -84,7 +84,7 @@ public class NpcSpawn : MonoBehaviour
         enemyStats.enabled = true;
 
         // Modifica as características do novo inimigo
-        if(gerarCaracteristicas)
+        if(gerarCaracteristicas == true)
         {
             ModificarCaracteristicas(novoInimigo);
         }

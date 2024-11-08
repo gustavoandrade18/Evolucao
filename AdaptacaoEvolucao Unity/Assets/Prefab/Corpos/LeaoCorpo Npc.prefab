@@ -53,11 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6171937961376106134, guid: b47607912e303e543a6327d41b15ae20, type: 3}
       propertyPath: m_Name
-      value: LeaoCorpo Variant Variant
+      value: LeaoCorpo Npc
       objectReference: {fileID: 0}
     - target: {fileID: 6171937961376106134, guid: b47607912e303e543a6327d41b15ae20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Inimigo
       objectReference: {fileID: 0}
     - target: {fileID: 7483698591610235067, guid: b47607912e303e543a6327d41b15ae20, type: 3}
       propertyPath: m_Sprite
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 6a2cdbe5ed627664d9bcaf4708b4c2d9, type: 3}
     - target: {fileID: 7483698591610235067, guid: b47607912e303e543a6327d41b15ae20, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4740702948950303009, guid: b47607912e303e543a6327d41b15ae20, type: 3}
@@ -83,29 +83,51 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873619295286133100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3cf2c771dad6ca41b61f7df93c2063c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   vidaTotal: 100
-  vida: 0
+  vida: 100
   vidaText: {fileID: 0}
   onTriggerBoca: {fileID: 0}
-  objetoPrefab: {fileID: 0}
+  objetoPrefab: {fileID: 8361804821120802354, guid: 0f29f9ef6e95ca045b5b37216c6ae675, type: 3}
+  vidaPrefab: {fileID: 76775630532887717, guid: f73c5fef18dd9ca4eb4764440c8444f7, type: 3}
   pontoCentro: {fileID: 0}
   foodAmount: 3
   carnivoro: 0
   player: {fileID: 0}
   playerDistance: {x: 0, y: 0}
-  maxDistance: 0
+  maxDistance: 45
   speed: 10
   detectionRange: 1
   velocidadeRotacao: 5
+  dectionVector: {x: 0, y: 0}
   oxigenioMax: 0
   oxigenio: 0
   walkSpeed: 0
   sprintSpeed: 0
   targetPosition: {x: 0, y: 0}
   advancedBeheavior: 1
+  partesStatus: 0
+--- !u!114 &8055675839959314511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873619295286133100}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f4e52255607d540b5e1b22a118c3e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  targetPosition: {x: 0, y: 0}
+  targetRange: 15
+  velocidadeRotacao: 5
+  speed: 10
+  player: {fileID: 0}
+  textoPrefab: {fileID: 76775630532887717, guid: f73c5fef18dd9ca4eb4764440c8444f7, type: 3}

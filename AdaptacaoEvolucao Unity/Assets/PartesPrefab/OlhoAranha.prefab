@@ -101,3 +101,5 @@ MonoBehaviour:
   oxigenioMax: 0
   tempo: 0
   visao: 9
+  oxigenioInimigo: 0
+  enemyDetection: 10
