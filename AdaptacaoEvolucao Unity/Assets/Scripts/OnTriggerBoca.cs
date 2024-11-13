@@ -22,6 +22,7 @@ public class OnTriggerBoca : MonoBehaviour
     public float fugidinhaCooldown;
     public GameObject player;
     float start=0f;
+    public bool quebraGelo = false;
 
     /*void SetPlayer(GameObject player) {
         this.player = player; 
@@ -136,7 +137,7 @@ public class OnTriggerBoca : MonoBehaviour
             cooldown =0;
             fugidinha = true;
             movimento.vida -= dano;
-            movimento.speed = movimento.sprintSpeed * 1.5f;
+            movimento.speed = movimento.sprintSpeed * 1.2f;
         } 
 
     }

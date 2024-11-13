@@ -47,6 +47,7 @@ public class GeraCaracteristicas : MonoBehaviour
         prefabGuelras = prefabsGuelras[salva.guelras];
         // Seleciona um prefab aleatório para o boca
         prefabBoca = prefabsBoca[salva.boca];
+        prefabBoca.tag = "BocaPlayer";
         // Seleciona um prefab aleatório para o olhos
         prefabOlhos = prefabsOlhos[salva.olhos];
         GameObject playerPrefab = Instantiate(prefabCorpo, new Vector3(0, 0, 0), Quaternion.identity);

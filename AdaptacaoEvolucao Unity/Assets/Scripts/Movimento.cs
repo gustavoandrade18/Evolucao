@@ -24,7 +24,6 @@ public class Movimento : MonoBehaviour
     private float oxigenio;
     public int oxigenioConsumo = 2;
     public int oxigenioRegenera = 1;
-    public TMP_Text oxigenioText; 
     private float tempo;
     public int oxigenioPattack;
     //variaveis do void Playerstats (vida)
@@ -32,20 +31,19 @@ public class Movimento : MonoBehaviour
     public float vida;
     public float vidaAcressimo = 20f;
     //Varieaveis imagem
-    public Image vidaImage;
-    public Image oxigenioImage;
-    public Image vidaImageInstance;
-    Image hpImage;
-    Image oxImage;
+    public Slider vidaImageInstance;
+    public Slider vidaImage;
+    public Slider oxigenioImage;
+    public Slider fomeImage;
+    public Slider expImage;
+    public Slider temperatureImage;
     public TMP_Text gameOver;
     //variaveis do void Playerstats (fome)
     public float fome;
     private float fomeTotal = 100.0f;   
     private float fomeConsumo;
     public float fomeConsumoI;
-    public TMP_Text fomeText;
     //variaveis da temperatura
-    public TMP_Text temperaturaText;
     public float temperatura;
     public float coldResistance;
     public float heatResistance;
@@ -53,10 +51,10 @@ public class Movimento : MonoBehaviour
     public OnTriggerBoca onTriggerBoca;
     private GameObject bocaPlayer; 
     //varivaveis de experiencia
-    public int exp;
-    public int expMax;
+    public float exp;
+    public float expMax;
     float expTime;
-    public int expPassiveGain;
+    public float expPassiveGain;
     public string[] fase = new string[3]{"Filhote", "Jovem", "Adulto"};
     public int level = 0;
     public TMP_Text expText;
@@ -73,13 +71,14 @@ public class Movimento : MonoBehaviour
     {
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
 
-        BarraManager(vidaImage, ref hpImage);
-        BarraManager(oxigenioImage, ref oxImage);
+        BarraManager(ref vidaImage);
+        BarraManager(ref oxigenioImage);
+        BarraManager(ref fomeImage);
+        BarraManager(ref expImage);
+        BarraManager(ref temperatureImage);
 
-        oxigenioText = canvas.transform.Find("Oxigenio").GetComponent<TMP_Text>();
-        fomeText = canvas.transform.Find("Fome").GetComponent<TMP_Text>();
-        temperaturaText = canvas.transform.Find("Temperatura").GetComponent<TMP_Text>();
-        expText = canvas.transform.Find("Exp").GetComponent<TMP_Text>();
+        gameOver = canvas.transform.Find("GameOver").GetComponent<TMP_Text>();
+        expText = expImage.transform.Find("Exp").GetComponent<TMP_Text>();
         levelText = canvas.transform.Find("Level").GetComponent<TMP_Text>();
         //
         walkSpeed = speed;
@@ -142,20 +141,20 @@ public class Movimento : MonoBehaviour
         }
         if(oxigenioImage != null)
         {
-           oxImage.fillAmount = oxigenio/oxigenioMax;
+           oxigenioImage.value = oxigenio/oxigenioMax;
         }
 
         //vida
-        if(hpImage != null)
+        if(vidaImage != null)
         {
-            hpImage.fillAmount = vida/100f;
+            vidaImage.value = vida/100f;
         }
         if(vida <=0)
         {
             Time.timeScale = 0;
             if(gameOver != null)
             {
-                gameOver.text = "Fim de jogo";
+                gameOver.text = "Fim de Jogo";
             }
         }
          if (Input.GetKeyUp(KeyCode.Minus))
@@ -163,9 +162,9 @@ public class Movimento : MonoBehaviour
             vida = vida-1;
          }
         //fome
-         if(fomeText != null)
+         if(fomeImage != null)
         {
-            fomeText.text= "Fome:" + fome + "%";
+            fomeImage.value = fome/fomeTotal;
         }
         if (fome > fomeTotal)
         {
@@ -196,9 +195,9 @@ public class Movimento : MonoBehaviour
         //maior que 35 começa a perder vida
         //menor que 10 fome aumentada
         //menos que 0 coemça a perder vida
-        if(temperaturaText != null)
+        if(temperatureImage != null)
         {
-            temperaturaText.text = "Temperatura:" + temperatura;
+            temperatureImage.value = temperatura/35;
         }
         if (temperatura >= 25)
         {
@@ -272,6 +271,10 @@ public class Movimento : MonoBehaviour
         {
             expText.text = "Exp:" + exp + "/" + expMax;
         }
+        if(expImage != null)
+        {
+            expImage.value = exp/expMax;
+        }
 
     }
 
@@ -315,11 +318,10 @@ public class Movimento : MonoBehaviour
         return closest;
     }
 
-    public void BarraManager(Image imagem, ref Image barra)
+    public void BarraManager(ref Slider imagem)
     {
-        vidaImageInstance = Instantiate(imagem);
-        vidaImageInstance.transform.SetParent(canvas.transform, false);
-        barra = vidaImageInstance.transform.Find("Fill Bar")?.GetComponent<Image>();
+        imagem = Instantiate(imagem);
+        imagem.transform.SetParent(canvas.transform, false);
     }
 
 
@@ -332,6 +334,7 @@ public class Movimento : MonoBehaviour
     {
         if(sprint == true)
         {
+            oxigenio -= oxigenioConsumo;
             speed = walkSpeed;
             sprint = false;
         }
