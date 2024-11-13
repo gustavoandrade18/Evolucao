@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: oxigenioMax
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: oxigenioImage
+      value: 
+      objectReference: {fileID: 6722870603270041151, guid: c2fec1e3e2df35f4e95db3c1ed39fbe3, type: 3}
     - target: {fileID: 9132696994438665654, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_Sprite
       value: 

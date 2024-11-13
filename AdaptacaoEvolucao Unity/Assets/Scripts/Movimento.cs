@@ -20,8 +20,8 @@ public class Movimento : MonoBehaviour
     public float walkSpeed =0.0f;
     //variaveis do void Playerstats (oxigenio)
     public bool sprint =false;
-    public int oxigenioMax;
-    private int oxigenio;
+    public float oxigenioMax;
+    private float oxigenio;
     public int oxigenioConsumo = 2;
     public int oxigenioRegenera = 1;
     public TMP_Text oxigenioText; 
@@ -31,9 +31,12 @@ public class Movimento : MonoBehaviour
     public float vidaTotal=100.0f;
     public float vida;
     public float vidaAcressimo = 20f;
+    //Varieaveis imagem
     public Image vidaImage;
+    public Image oxigenioImage;
     public Image vidaImageInstance;
-    public Image hpImage;
+    Image hpImage;
+    Image oxImage;
     public TMP_Text gameOver;
     //variaveis do void Playerstats (fome)
     public float fome;
@@ -69,9 +72,9 @@ public class Movimento : MonoBehaviour
     void Start()
     {
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        vidaImageInstance = Instantiate(vidaImage);
-        vidaImageInstance.transform.SetParent(canvas.transform, false);
-        hpImage = vidaImageInstance.transform.Find("Hp")?.GetComponent<Image>();
+
+        BarraManager(vidaImage, ref hpImage);
+        BarraManager(oxigenioImage, ref oxImage);
 
         oxigenioText = canvas.transform.Find("Oxigenio").GetComponent<TMP_Text>();
         fomeText = canvas.transform.Find("Fome").GetComponent<TMP_Text>();
@@ -137,9 +140,9 @@ public class Movimento : MonoBehaviour
         {
             oxigenio = oxigenioMax;
         }
-        if(oxigenioText != null)
+        if(oxigenioImage != null)
         {
-            oxigenioText.text= "Oxigenio:" + oxigenio;
+           oxImage.fillAmount = oxigenio/oxigenioMax;
         }
 
         //vida
@@ -310,6 +313,13 @@ public class Movimento : MonoBehaviour
         }
 
         return closest;
+    }
+
+    public void BarraManager(Image imagem, ref Image barra)
+    {
+        vidaImageInstance = Instantiate(imagem);
+        vidaImageInstance.transform.SetParent(canvas.transform, false);
+        barra = vidaImageInstance.transform.Find("Fill Bar")?.GetComponent<Image>();
     }
 
 
