@@ -6,7 +6,7 @@ public class GeloInteracao : MonoBehaviour
 {
     public OnTriggerBoca onTriggerBoca;
     public GameObject objetoPrefab; 
-    private float vida = 8;
+    private float vida = 10;
     public Transform pontoCentro;
     // Start is called before the first frame update
     void Start()
@@ -35,6 +35,7 @@ public class GeloInteracao : MonoBehaviour
         {
             if(onTriggerBoca.attack == true && onTriggerBoca.quebraGelo)
             {
+             Debug.Log(vida);   
                 vida -= onTriggerBoca.dano;
             }
         }

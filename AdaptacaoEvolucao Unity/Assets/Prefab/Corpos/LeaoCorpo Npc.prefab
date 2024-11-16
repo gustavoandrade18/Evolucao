@@ -91,10 +91,9 @@ MonoBehaviour:
   canvas: {fileID: 0}
   vidaTotal: 100
   vida: 100
-  vidaText: {fileID: 0}
+  vidaSlider: {fileID: 7991391839508431619, guid: f1069c2e87a1f744d8167ab6ebfc4853, type: 3}
   onTriggerBoca: {fileID: 0}
   objetoPrefab: {fileID: 8361804821120802354, guid: 0f29f9ef6e95ca045b5b37216c6ae675, type: 3}
-  vidaPrefab: {fileID: 76775630532887717, guid: f73c5fef18dd9ca4eb4764440c8444f7, type: 3}
   pontoCentro: {fileID: 0}
   foodAmount: 3
   carnivoro: 0

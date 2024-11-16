@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class EnemyStats : MonoBehaviour
 {
@@ -10,11 +11,10 @@ public class EnemyStats : MonoBehaviour
     public float vidaTotal=100.0f;
     public float vida;
     private int porcentagem;
-    public TMP_Text vidaText;
+    public Slider vidaSlider;
     public OnTriggerBoca onTriggerBoca;
     public GameObject objetoPrefab;
     NpcSpawn npcSpawn;
-    public TMP_Text vidaPrefab;
     FollowGameObject followGameObject;
     OutOfBounds outOfBounds;
     //spawn da comida variavel
@@ -52,12 +52,11 @@ public class EnemyStats : MonoBehaviour
         
         // Configura o texto canvas do inimigo
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        vidaText = Instantiate(vidaPrefab);
-        vidaText.transform.SetParent(canvas.transform, false);
-        followGameObject = vidaText.GetComponent<FollowGameObject>();
-        followGameObject.inimigoObject =  this.gameObject;
         
-
+        BarraManager(ref vidaSlider);
+        
+        followGameObject = vidaSlider.GetComponent<FollowGameObject>();
+        followGameObject.inimigoObject =  this.gameObject;
         //
         player = GameObject.FindGameObjectWithTag("Player");
         vida = vidaTotal;
@@ -135,9 +134,9 @@ public class EnemyStats : MonoBehaviour
     void EnemyStat()
     {
         porcentagem = Mathf.FloorToInt(vida/(vidaTotal/100));
-        if (vidaText != null)
+        if (vidaSlider != null)
         {
-            vidaText.text= "Vida:" + porcentagem + "%";
+            vidaSlider.value = vida/vidaTotal;
         }
         if(vida<=0)
         {
@@ -233,5 +232,10 @@ public class EnemyStats : MonoBehaviour
         {
             targetPosition.y = Random.Range(-targetRange, targetRange);
         }
+    }
+    public void BarraManager(ref Slider imagem)
+    {
+        imagem = Instantiate(imagem);
+        imagem.transform.SetParent(canvas.transform, false);
     }
 }
