@@ -149,15 +149,18 @@ public class EnemyStats : MonoBehaviour
             {
                 npcSpawn.inimigoHerbivoro--;
             }
-            while (foodAmount > 0 && onTriggerBoca.attack==false)
+            if(onTriggerBoca != null)
             {
-                Vector2 randomOffset = Random.insideUnitCircle * raioSpawn;
-                Vector2 spawnPosition = pontoCentro ? (Vector2)pontoCentro.position + randomOffset : (Vector2)transform.position + randomOffset;
-                Instantiate(objetoPrefab, spawnPosition, Quaternion.identity);
-                foodAmount--;
-                if (foodAmount > 0)
+                while (foodAmount > 0 && onTriggerBoca.attack==false)
                 {
-                    Destroy(gameObject);
+                    Vector2 randomOffset = Random.insideUnitCircle * raioSpawn;
+                    Vector2 spawnPosition = pontoCentro ? (Vector2)pontoCentro.position + randomOffset : (Vector2)transform.position + randomOffset;
+                    Instantiate(objetoPrefab, spawnPosition, Quaternion.identity);
+                    foodAmount--;
+                    if (foodAmount > 0)
+                    {
+                        Destroy(gameObject);
+                    }
                 }
             }
         }

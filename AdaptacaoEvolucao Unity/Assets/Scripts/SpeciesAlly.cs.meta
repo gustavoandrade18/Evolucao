@@ -3,7 +3,10 @@ guid: 51f4e52255607d540b5e1b22a118c3e7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - canvas: {instanceID: 0}
+  - player: {instanceID: 0}
+  - textoPrefab: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

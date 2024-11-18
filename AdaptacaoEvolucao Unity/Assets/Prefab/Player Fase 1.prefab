@@ -110,17 +110,20 @@ MonoBehaviour:
   oxigenioMax: 0
   oxigenioConsumo: 2
   oxigenioRegenera: 2
-  oxigenioText: {fileID: 0}
   oxigenioPattack: 2
   vidaTotal: 100
   vida: 0
   vidaAcressimo: 20
-  vidaText: {fileID: 0}
-  gameOver: {fileID: 0}
+  vidaImageInstance: {fileID: 0}
+  vidaImage: {fileID: 7991391839508431619, guid: 7ca631878175ae44885969dd054d4829, type: 3}
+  oxigenioImage: {fileID: 4855540842997872222, guid: 9f8c40ddd0f34914e8c5884d93ea8f3f, type: 3}
+  fomeImage: {fileID: 8640962180035668054, guid: e297ad5d1fe8db6419534426f3b2bf18, type: 3}
+  expImage: {fileID: 3459812609093481301, guid: 728f7c02ad4fc1249a0d3e2fb109d181, type: 3}
+  temperatureImage: {fileID: 3666032111190032418, guid: 5f3839588e246c24496f3c58d09695d2, type: 3}
+  gameOver: {fileID: 5871004678103741047, guid: a90a6d1e79eca8f4fb50797392db6ff0, type: 3}
   fome: 0
+  fomeConsumo: 0
   fomeConsumoI: 1
-  fomeText: {fileID: 0}
-  temperaturaText: {fileID: 0}
   temperatura: 17
   coldResistance: 0
   heatResistance: 0
@@ -134,9 +137,10 @@ MonoBehaviour:
   - Adulto
   level: 0
   expText: {fileID: 0}
-  levelText: {fileID: 0}
+  levelText: {fileID: 4672289974221791694, guid: 41ef8bf3a6a95624b8c6aa88272843f5, type: 3}
   reproduzir: 0
   minDistance: 10
+  canvas: {fileID: 0}
 --- !u!114 &150475513578901440
 MonoBehaviour:
   m_ObjectHideFlags: 0

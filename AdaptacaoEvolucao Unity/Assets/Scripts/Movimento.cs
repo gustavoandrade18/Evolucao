@@ -41,7 +41,7 @@ public class Movimento : MonoBehaviour
     //variaveis do void Playerstats (fome)
     public float fome;
     private float fomeTotal = 100.0f;   
-    private float fomeConsumo;
+    public float fomeConsumo;
     public float fomeConsumoI;
     //variaveis da temperatura
     public float temperatura;
@@ -77,9 +77,11 @@ public class Movimento : MonoBehaviour
         BarraManager(ref expImage);
         BarraManager(ref temperatureImage);
 
-        gameOver = canvas.transform.Find("GameOver").GetComponent<TMP_Text>();
+        gameOver = Instantiate(gameOver);
+        gameOver.transform.SetParent(canvas.transform, false);
+        levelText = Instantiate(levelText);
+        levelText.transform.SetParent(canvas.transform, false);
         expText = expImage.transform.Find("Exp").GetComponent<TMP_Text>();
-        levelText = canvas.transform.Find("Level").GetComponent<TMP_Text>();
         //
         walkSpeed = speed;
         sprintSpeed = speed * 2;
@@ -155,6 +157,7 @@ public class Movimento : MonoBehaviour
             if(gameOver != null)
             {
                 gameOver.text = "Fim de Jogo";
+                gameOver.gameObject.SetActive(true);
             }
         }
          if (Input.GetKeyUp(KeyCode.Minus))

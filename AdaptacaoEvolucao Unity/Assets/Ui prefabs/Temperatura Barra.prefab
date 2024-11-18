@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 1733742550462568312}
   - component: {fileID: 3666032111190032418}
   m_Layer: 0
-  m_Name: Slider Red
+  m_Name: Temperatura Barra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

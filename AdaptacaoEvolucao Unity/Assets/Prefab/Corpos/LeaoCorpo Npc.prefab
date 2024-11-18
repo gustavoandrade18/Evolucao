@@ -129,4 +129,4 @@ MonoBehaviour:
   velocidadeRotacao: 5
   speed: 10
   player: {fileID: 0}
-  textoPrefab: {fileID: 76775630532887717, guid: f73c5fef18dd9ca4eb4764440c8444f7, type: 3}
+  textoPrefab: {fileID: 5871004678103741047, guid: 5a160b4327c76e849b1977ef23117ee7, type: 3}

@@ -27,6 +27,7 @@ public class GeraCaracteristicas : MonoBehaviour
     GameObject prefabOlhos;
 
     private GameObject player;
+    Movimento movimento;
     NpcSpawn npcSpawn;
     GameObject ally;
     SpeciesAlly speciesAlly;
@@ -52,7 +53,7 @@ public class GeraCaracteristicas : MonoBehaviour
         prefabOlhos = prefabsOlhos[salva.olhos];
         GameObject playerPrefab = Instantiate(prefabCorpo, new Vector3(0, 0, 0), Quaternion.identity);
         playerPrefab.tag = "Player";
-        Movimento movimento = playerPrefab.GetComponent<Movimento>();
+        movimento = playerPrefab.GetComponent<Movimento>();
         movimento.enabled = true;
         
         player = GameObject.FindGameObjectWithTag("Player");
@@ -78,6 +79,7 @@ public class GeraCaracteristicas : MonoBehaviour
             // Substitui as guelras
             ReplaceChild(childGuelras, prefabGuelras, player);
 
+            movimento.fomeConsumoI += (float)salva.olhos / 2 + (float)salva.rabo / 2;
         }
 
     }

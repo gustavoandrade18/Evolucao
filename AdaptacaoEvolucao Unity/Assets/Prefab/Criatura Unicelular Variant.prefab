@@ -81,7 +81,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   vidaTotal: 100
   vida: 0
-  vidaText: {fileID: 0}
+  vidaSlider: {fileID: 7991391839508431619, guid: 7ca631878175ae44885969dd054d4829, type: 3}
   onTriggerBoca: {fileID: 0}
   objetoPrefab: {fileID: 8361804821120802354, guid: 0f29f9ef6e95ca045b5b37216c6ae675, type: 3}
   pontoCentro: {fileID: 3708564044628496842, guid: 7252f3fa118af014ebbb86cff3fba157, type: 3}
@@ -93,9 +93,11 @@ MonoBehaviour:
   speed: 10
   detectionRange: 1
   velocidadeRotacao: 5
+  dectionVector: {x: 0, y: 0}
   oxigenioMax: 0
   oxigenio: 0
   walkSpeed: 0
   sprintSpeed: 0
   targetPosition: {x: 0, y: 0}
   advancedBeheavior: 1
+  partesStatus: 0

@@ -6,10 +6,10 @@ using UnityEngine;
 public class EvolucaoEntreCenas : ScriptableObject
 {
     // Start is called before the first frame update
-    public int rabo;
-    public int boca;
-    public int olhos;
-    public int guelras;
-    public int corpo;
+    public int rabo=0;
+    public int boca=0;
+    public int olhos=0;
+    public int guelras=0;
+    public int corpo=0;
     
 }
