@@ -342,6 +342,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5530854994684541851, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
   m_PrefabInstance: {fileID: 1000741748098738725}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &833779992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2105875243803043128, guid: 17183ced05594534382ea92c7215924e, type: 3}
+  m_PrefabInstance: {fileID: 959053485}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &833779993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833779992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &959053485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -405,7 +423,8 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 635487039}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2105875243803043129, guid: 17183ced05594534382ea92c7215924e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 17183ced05594534382ea92c7215924e, type: 3}
 --- !u!1 &1069564710
 GameObject:
@@ -418,6 +437,7 @@ GameObject:
   - component: {fileID: 1069564713}
   - component: {fileID: 1069564712}
   - component: {fileID: 1069564711}
+  - component: {fileID: 1069564714}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -475,6 +495,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1069564714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069564710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 768126039
+      Data2: 1106524200
+      Data3: 1247666050
+      Data4: 1986985377
+    Path: event:/Som de Oceano
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1071717708
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,6 +560,13 @@ MonoBehaviour:
   menuPanel: {fileID: 1504665296}
   tutorialText: {fileID: 1299040158}
   textoQuantidade: 0
+  click:
+    Guid:
+      Data1: -808133366
+      Data2: 1180603984
+      Data3: -38398822
+      Data4: -983838833
+    Path: event:/Click editado
 --- !u!114 &1071717710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +892,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
   m_PrefabInstance: {fileID: 1000741748098738725}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1500463039
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635487039}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 887ef16d162b10d41a9d4174f317d5e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1504665296
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1504665297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1120,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.0000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1089,6 +1180,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1500463039}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: fomeText
       value: 
       objectReference: {fileID: 0}
@@ -1100,5 +1195,53 @@ PrefabInstance:
       propertyPath: levelText
       value: 
       objectReference: {fileID: 4672289974221791694, guid: 41ef8bf3a6a95624b8c6aa88272843f5, type: 3}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: nado.Path
+      value: event:/Nado
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: quimio.Path
+      value: event:/Hfx- Quimiossintese
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: fumacaPrefab
+      value: 
+      objectReference: {fileID: 209103260801149857, guid: d0febcca11264554b90016f5a6c96c4c, type: 3}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: nado.Guid.Data1
+      value: 418484611
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: nado.Guid.Data2
+      value: 1157003996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: nado.Guid.Data3
+      value: -1584439156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: nado.Guid.Data4
+      value: -627796805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: quimioAnimation
+      value: 
+      objectReference: {fileID: 1500463039}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: quimio.Guid.Data1
+      value: 1609464254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: quimio.Guid.Data2
+      value: 1110466376
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: quimio.Guid.Data3
+      value: -1323198544
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: quimio.Guid.Data4
+      value: -131804240
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}

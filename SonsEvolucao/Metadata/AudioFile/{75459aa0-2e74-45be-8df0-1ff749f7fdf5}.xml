@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{75459aa0-2e74-45be-8df0-1ff749f7fdf5}">
+		<property name="assetPath">
+			<value>Som de Oceano.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>54</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f6d7563-a468-4216-a4e4-02c1ae12e06d}</destination>
+		</relationship>
+	</object>
+</objects>

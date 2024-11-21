@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class Movimento : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Movimento : MonoBehaviour
     public float rotacaoMultiplica;
     public float sprintSpeed;
     public float walkSpeed =0.0f;
+    float tempoNado=5f;
     //variaveis do void Playerstats (oxigenio)
     public bool sprint =false;
     public float oxigenioMax;
@@ -65,11 +67,24 @@ public class Movimento : MonoBehaviour
     public float minDistance = 10f;
     //canvas
     public Canvas canvas;
+    //Sons
+    [SerializeField] private EventReference quimio;
+    private FMOD.Studio.EventInstance quimioAudio;
+    [SerializeField] private EventReference nado;
+    private FMOD.Studio.EventInstance nadoAudio;
+    // animacao
+    [SerializeField] private Animator animator;
+    //efeitos
+    public GameObject fumacaPrefab;
+    private GameObject fumaca;
 
 
     void Start()
     {
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+
+        quimioAudio = RuntimeManager.CreateInstance(quimio);
+        nadoAudio = RuntimeManager.CreateInstance(nado);
 
         BarraManager(ref vidaImage);
         BarraManager(ref oxigenioImage);
@@ -113,6 +128,10 @@ public class Movimento : MonoBehaviour
             tempo2 += Time.deltaTime;
             if(tempo2 >= 2f)
             {
+                fumaca = Instantiate(fumacaPrefab, transform.position, Quaternion.identity);
+                Destroy(fumaca, 0.5f);
+
+                quimioAudio.start();
                 fome += 15;
                 exp += 15;
                 tempo2 = -1;
@@ -223,6 +242,7 @@ public class Movimento : MonoBehaviour
     //Movimentacao da criatura
     void Move()
     {
+        tempoNado += Time.deltaTime;
          // Obtém a direção para onde o personagem está se movendo ou olhando
         Vector2 direcao = new Vector2(move.x, move.y);
         
@@ -239,6 +259,11 @@ public class Movimento : MonoBehaviour
             // Aplica a rotação
             if(move.x != 0 || move.y != 0)
             {
+                if(tempoNado > 5f/(speed/walkSpeed))
+                {
+                    nadoAudio.start();
+                    tempoNado = 0f;
+                }
                 transform.rotation = Quaternion.Euler(0, 0, anguloSuave);
                 transform.Translate( direction * speed * Time.deltaTime);
             }
@@ -374,11 +399,13 @@ public class Movimento : MonoBehaviour
         if(onTriggerBoca == null)
         {
             quimiosintesse = true;
+            animator.SetBool("Quimio", true);
         }
     }
     public void OnAttackRelease (InputValue value)
     {
         quimiosintesse = false;
+        animator.SetBool("Quimio", false);
         tempo2 = 0;
     }
     public void OnReproduzirPress (InputValue value)

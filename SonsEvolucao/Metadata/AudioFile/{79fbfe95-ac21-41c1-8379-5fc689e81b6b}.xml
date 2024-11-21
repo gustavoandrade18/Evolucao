@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{79fbfe95-ac21-41c1-8379-5fc689e81b6b}">
+		<property name="assetPath">
+			<value>aguaMovimento2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.6052708333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f6d7563-a468-4216-a4e4-02c1ae12e06d}</destination>
+		</relationship>
+	</object>
+</objects>

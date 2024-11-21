@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{54aa586a-70d2-434d-81b9-90b6542f7918}">
+		<property name="assetPath">
+			<value>Hfx- Quimiossintese.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.40000000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f6d7563-a468-4216-a4e4-02c1ae12e06d}</destination>
+		</relationship>
+	</object>
+</objects>

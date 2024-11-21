@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-
+using FMODUnity;
 public class Level1Tutorial : MonoBehaviour
 {
     public float tempo=0f;
@@ -14,10 +14,13 @@ public class Level1Tutorial : MonoBehaviour
     public TMP_Text tutorialText; 
     public int textoQuantidade;
     float reproducao;
-    //variaveis para recuperar valores do movimento
+    //audio
+    [SerializeField] private EventReference click;
+    private FMOD.Studio.EventInstance clickAudio;
     // Start is called before the first frame update
     void Start()
     {
+        clickAudio = RuntimeManager.CreateInstance(click);
         player = GameObject.FindGameObjectWithTag("Player");
         movimento = player.GetComponent<Movimento>();
     }
@@ -48,6 +51,7 @@ public class Level1Tutorial : MonoBehaviour
             {
                 tempo = 1.5f;
                 textoQuantidade ++;
+                clickAudio.start();
             }
     }
     public void Tutorial()
@@ -59,7 +63,7 @@ public class Level1Tutorial : MonoBehaviour
             if(textoQuantidade==0)
             {
                 menuPanel.SetActive(true);
-                tutorialText.text = "Bem vindo a Adaptação à Evolução, eu sou o tutorial e vou te ensinar o basico sobre o jogo.";
+                tutorialText.text = "Bem vindo a Adaptação à Evolução, este é o tutorial e que vai te ensinar o basico sobre o jogo.";
                 movimento.enabled = false;
             }
             if(textoQuantidade==1)
@@ -69,15 +73,15 @@ public class Level1Tutorial : MonoBehaviour
             }
             if(textoQuantidade == 2)
             {
-                tutorialText.text = "Sua criatura ainda é muito simples, então a forma no qual você se alimenta é simples, quimiossintese é o nome desse processo de alimentação.";
+                tutorialText.text = "Sua criatura ainda é muito simples, então a forma no qual ela se alimenta é simples, quimiossintese é o nome desse processo de alimentação.";
             }
             if(textoQuantidade == 3)
             {
-                tutorialText.text = "A quimiossíntese é o processo pelo qual organismos utilizam substâncias químicas inorgânicas para produzir energia e compostos orgânicos, sem a necessidade de luz solar.";
+                tutorialText.text = "A quimiossíntese é o processo pelo qual organismos utilizam substâncias químicas inorgânicas para produzir energia, sem a necessidade de luz solar.";
             }
             if(textoQuantidade == 4)
             {
-                tutorialText.text = "segure espaço ou o botão de ataque para realizar a quimiosintesse";
+                tutorialText.text = "(segure espaço ou o botão de ataque para realizar a quimiosintesse)";
             }
             if(textoQuantidade == 5)
             {
@@ -98,11 +102,11 @@ public class Level1Tutorial : MonoBehaviour
             }
             if(textoQuantidade == 9)
             {
-               tutorialText.text = "Agora que sua criatura cresceu, ela pode se reproduzir, dando origem a novas gerações";
+               tutorialText.text = "Agora que sua criatura cresceu, ela pode se reproduzir, dando origem a novas criaturas que com o passar de varias gerações, terão novas caracteristicas";
             }
             if(textoQuantidade == 10)
             {
-               tutorialText.text = "Sua criatura se reproduz de forma assexuada, então por enquanto ela não precisa de outra criatura para se reproduzir";
+               tutorialText.text = "Sua criatura se reproduz de forma assexuada, então por enquanto ela não precisa de outra criatura para se reproduzir, porem nas fases seguintes isso vai ser diferente";
             }
             if(textoQuantidade == 11)
             {
