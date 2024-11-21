@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000002083E15ED58 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000269B7FD4F28 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,17 +17,17 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SoundI::release                          : Som de Oceano (00000208640E43F8)
-[LOG] SoundI::release                          :     Som de Oceano (000002083ECCAA58)
-[LOG] SoundI::release                          :     Som de Oceano (000002086875E408)
-[LOG] SoundI::release                          :  (000002078DC2E228)
-[LOG] SoundI::release                          :     aguaMovimento1 (000002083EEA1268)
-[LOG] SoundI::release                          :  (000002083EE7FED8)
-[LOG] SoundI::release                          :     aguaMovimento2 (0000020872763098)
-[LOG] SoundI::release                          :  (000002078DC2E398)
-[LOG] SoundI::release                          :     Hfx- Quimiossintese (000002083EEA1A88)
-[LOG] SoundI::release                          :  (000002083EE7FBF8)
-[LOG] SoundI::release                          :     Click editado (000002083EEA1DC8)
+[LOG] SoundI::release                          : Som de Oceano (000002696AC7BC98)
+[LOG] SoundI::release                          :     Som de Oceano (00000269B889AE58)
+[LOG] SoundI::release                          :     Som de Oceano (00000268E40EC748)
+[LOG] SoundI::release                          :  (00000268E23554E8)
+[LOG] SoundI::release                          :     aguaMovimento1 (00000269E1ED3588)
+[LOG] SoundI::release                          :  (00000268E2459248)
+[LOG] SoundI::release                          :     aguaMovimento2 (00000269E2BABB38)
+[LOG] SoundI::release                          :  (00000268E2459978)
+[LOG] SoundI::release                          :     Hfx- Quimiossintese (00000269E2BAB4B8)
+[LOG] SoundI::release                          :  (00000268E2459528)
+[LOG] SoundI::release                          :     Click editado (00000269E2BAC1B8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
