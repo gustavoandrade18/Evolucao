@@ -56,7 +56,10 @@ public class Level1Tutorial : MonoBehaviour
     }
     public void Tutorial()
     {
-        tempo += Time.deltaTime;
+        if(textoQuantidade != 7)
+        {
+            tempo += Time.deltaTime;
+        }
         if(tempo >= 1.5f)
         {
 

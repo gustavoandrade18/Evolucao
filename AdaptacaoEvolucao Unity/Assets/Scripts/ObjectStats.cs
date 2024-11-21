@@ -29,7 +29,7 @@ public class ObjectStats : MonoBehaviour
         if(tempo >= 0.1f && tempo<=0.5f)
         {
             MonoBehaviour parentScript = null;
-            if (transform.parent.tag == "Player")
+            if (transform.parent.tag == "Player" || transform.parent.tag == "Criatura0" || transform.parent.tag == "Criatura1" || transform.parent.tag == "Criatura2" )
             {
                 parentScript = transform.parent.GetComponent<Movimento>();
             }
@@ -97,6 +97,8 @@ public class ObjectStats : MonoBehaviour
         {
             mainCamera = Camera.main;
             mainCamera.orthographicSize = visao;
+            Movimento movScript = (Movimento)myScript;
+            movScript.visao = visao;
         }
         else if (myScript is EnemyStats)
         {

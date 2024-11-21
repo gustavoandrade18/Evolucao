@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8711225467211165715}
   m_Layer: 0
   m_Name: Tentaculo
-  m_TagString: Untagged
+  m_TagString: Rabo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,8 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4fd7b44417fed49b0f962e47754a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 9
   oxigenioMax: 0
   tempo: 0
   visao: 0
   oxigenioInimigo: 0
+  enemyDetection: 0

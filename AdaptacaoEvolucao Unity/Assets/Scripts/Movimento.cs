@@ -28,6 +28,7 @@ public class Movimento : MonoBehaviour
     public int oxigenioRegenera = 1;
     private float tempo;
     public int oxigenioPattack;
+    public float visao;
     //variaveis do void Playerstats (vida)
     public float vidaTotal=100.0f;
     public float vida;
@@ -51,6 +52,7 @@ public class Movimento : MonoBehaviour
     public float heatResistance;
     //Boca
     public OnTriggerBoca onTriggerBoca;
+    public float dano;
     private GameObject bocaPlayer; 
     //varivaveis de experiencia
     public float exp;
@@ -405,7 +407,10 @@ public class Movimento : MonoBehaviour
     public void OnAttackRelease (InputValue value)
     {
         quimiosintesse = false;
-        animator.SetBool("Quimio", false);
+        if(animator != null)
+        {
+            animator.SetBool("Quimio", false);
+        }
         tempo2 = 0;
     }
     public void OnReproduzirPress (InputValue value)
