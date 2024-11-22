@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ModificadorCaracteristicas : MonoBehaviour
 {
-    // Start is called before the first frame update
+// Start is called before the first frame update
 public GameObject[] prefabsRabo; // Array de prefabs do rabo
 public GameObject[] prefabsBoca; // Array de prefabs da boca
 public GameObject[] prefabsOlhos; // Array de prefabs dos olhos
@@ -79,7 +79,8 @@ public Vector3[] posicoes; // Array para armazenar as posições correspondentes
             ReplaceChild(childGuelras, prefabGuelras);
 
         }
-
+        Movimento movimento = criatura[criaturaNumber].GetComponent<Movimento>();
+        movimento.fomeConsumoI += (float)olhoNumero[criaturaNumber] / 2 + (float)raboNumero[criaturaNumber] / 2 + (float)bocaNumero[criaturaNumber] / 2;
         criaturaNumber++;
         }
     }

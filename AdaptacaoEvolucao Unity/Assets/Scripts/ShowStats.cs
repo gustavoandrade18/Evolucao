@@ -10,6 +10,8 @@ public class ShowStats : MonoBehaviour
     public int criatura;
     public GameObject criaturaObject;
     private bool alreadyExecuted = false;
+    public GameObject bocaPlayer;
+    OnTriggerBoca bocaScript;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +26,22 @@ public class ShowStats : MonoBehaviour
         {
             criaturaObject = GameObject.FindGameObjectWithTag("Criatura" + criatura);
             movimento = criaturaObject.GetComponent<Movimento>();
+
+            foreach (Transform filho in criaturaObject.transform)
+            {
+                if (filho.CompareTag("BocaPlayer"))
+                {
+                    bocaPlayer = filho.gameObject;
+                    break;
+                }
+            }
+            bocaScript = bocaPlayer.GetComponent<OnTriggerBoca>();
             alreadyExecuted = true;
         }
+            
 
         caracteristicas[0].text = "Visão:\n" + movimento.visao;
-        //caracteristicas[1].text = "Visão:\n" + dano;
+        caracteristicas[1].text = "Dano:\n" + bocaScript.dano;
         caracteristicas[2].text = "Velocidade:\n" + movimento.speed;
         caracteristicas[3].text = "Tolerancia frio:\n" + movimento.coldResistance;
         caracteristicas[4].text = "Tolerancia calor:\n" + movimento.heatResistance;

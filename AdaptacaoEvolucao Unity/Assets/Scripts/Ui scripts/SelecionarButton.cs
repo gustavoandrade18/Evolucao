@@ -11,6 +11,7 @@ public class SelecionarButton : MonoBehaviour
 
     [SerializeField] private EventReference click;
     private FMOD.Studio.EventInstance clickAudio;
+    public GameObject[] menuPanel;
     // Start is called before the first frame update
    public void Selecionar1()
    {
@@ -24,7 +25,7 @@ public class SelecionarButton : MonoBehaviour
       SceneManager.LoadScene("Teste de Mecanicas");
 
    }
-    public void Selecionar2()
+   public void Selecionar2()
    {
       clickAudio = RuntimeManager.CreateInstance(click);
       clickAudio.start();
@@ -35,7 +36,7 @@ public class SelecionarButton : MonoBehaviour
       salva.corpo = caracteristicas.corpoNumero[1];
       SceneManager.LoadScene("Teste de Mecanicas");
    }
-    public void Selecionar3()
+   public void Selecionar3()
    {
       clickAudio = RuntimeManager.CreateInstance(click);
       clickAudio.start();
@@ -45,5 +46,17 @@ public class SelecionarButton : MonoBehaviour
       salva.guelras = caracteristicas.guelrasNumero[2];
       salva.corpo = caracteristicas.corpoNumero[2];
       SceneManager.LoadScene("Teste de Mecanicas");
+   }
+   public void ShowStats1()
+   {
+      menuPanel[0].SetActive(!menuPanel[0].activeSelf);  
+   }
+   public void ShowStats2()
+   {
+      menuPanel[1].SetActive(!menuPanel[1].activeSelf);  
+   }
+   public void ShowStats3()
+   {
+      menuPanel[2].SetActive(!menuPanel[2].activeSelf);  
    }
 }

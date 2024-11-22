@@ -79,7 +79,7 @@ public class GeraCaracteristicas : MonoBehaviour
             // Substitui as guelras
             ReplaceChild(childGuelras, prefabGuelras, player);
 
-            movimento.fomeConsumoI += (float)salva.olhos / 2 + (float)salva.rabo / 2;
+            movimento.fomeConsumoI += (float)salva.olhos / 2 + (float)salva.rabo / 2 + (float)salva.boca / 2;
         }
 
     }

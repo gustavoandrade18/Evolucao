@@ -14,6 +14,9 @@ public class Level1Tutorial : MonoBehaviour
     public TMP_Text tutorialText; 
     public int textoQuantidade;
     float reproducao;
+    //objeto que salva valores
+    [SerializeField] EvolucaoEntreCenas salva;
+
     //audio
     [SerializeField] private EventReference click;
     private FMOD.Studio.EventInstance clickAudio;
@@ -37,6 +40,7 @@ public class Level1Tutorial : MonoBehaviour
             if(reproducao >= 3f)
             {
                 SceneManager.LoadScene("Selecao de criatura 1");
+                salva.fase = 1;
             }
         }
         else if(movimento.reproduzir == false)
