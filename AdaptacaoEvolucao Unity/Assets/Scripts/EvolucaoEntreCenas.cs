@@ -11,5 +11,5 @@ public class EvolucaoEntreCenas : ScriptableObject
     public int olhos=0;
     public int guelras=0;
     public int corpo=0;
-    public int fase=0;
+    public int fase=1;
 }
