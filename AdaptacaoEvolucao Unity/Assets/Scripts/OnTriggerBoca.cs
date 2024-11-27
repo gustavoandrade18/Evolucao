@@ -94,6 +94,7 @@ public class OnTriggerBoca : MonoBehaviour
         if(attack==true)
         {
             tempo += Time.deltaTime;
+            attack=false;
         }
         if(attack==true && tempo>=0.1)
         {

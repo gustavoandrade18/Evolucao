@@ -28,6 +28,7 @@ public class Movimento : MonoBehaviour
     public int oxigenioRegenera = 1;
     private float tempo;
     public int oxigenioPattack;
+    bool atacado = false;
     public float visao;
     //variaveis do void Playerstats (vida)
     public float vidaTotal=100.0f;
@@ -386,26 +387,32 @@ public class Movimento : MonoBehaviour
     }
     public void OnAttackPress (InputValue value)
     {
-        bocaPlayer = GameObject.FindGameObjectWithTag("BocaPlayer");
-        if(bocaPlayer != null)
+        if(atacado == false)
         {
-            onTriggerBoca = bocaPlayer.GetComponent<OnTriggerBoca>();
-        }
-        
-        if(oxigenio >= oxigenioPattack && onTriggerBoca != null)
-        {
-            onTriggerBoca.attack = true;
-            onTriggerBoca.boxCollider.size += new Vector2(onTriggerBoca.sizeIncrease, onTriggerBoca.sizeIncrease);
-            oxigenio -= oxigenioPattack;
-        }
-        if(onTriggerBoca == null)
-        {
-            quimiosintesse = true;
-            animator.SetBool("Quimio", true);
+            bocaPlayer = GameObject.FindGameObjectWithTag("BocaPlayer");
+            if(bocaPlayer != null)
+            {
+                onTriggerBoca = bocaPlayer.GetComponent<OnTriggerBoca>();
+            }
+            
+            if(oxigenio >= oxigenioPattack && onTriggerBoca != null)
+            {
+                onTriggerBoca.attack = true;
+                onTriggerBoca.boxCollider.size += new Vector2(onTriggerBoca.sizeIncrease, onTriggerBoca.sizeIncrease);
+                oxigenio -= oxigenioPattack;
+                Debug.Log("aa");
+            }
+            if(onTriggerBoca == null)
+            {
+                quimiosintesse = true;
+                animator.SetBool("Quimio", true);
+            }
+            atacado = true;
         }
     }
     public void OnAttackRelease (InputValue value)
     {
+        atacado = false;
         quimiosintesse = false;
         if(animator != null)
         {

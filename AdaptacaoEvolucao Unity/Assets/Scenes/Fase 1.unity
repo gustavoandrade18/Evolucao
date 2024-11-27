@@ -426,6 +426,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &828989794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1372261885112024828, guid: d983ae7d0798bbb4aa0ec08d7bf7390e, type: 3}
+  m_PrefabInstance: {fileID: 1465499042}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &828989798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828989794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bafb8903094710c4a9ecb0ed5ff8b905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempo: 0
+  menuPanel: {fileID: 1504665296}
+  tutorialText: {fileID: 1299040158}
+  textoQuantidade: 0
+  salva: {fileID: 11400000, guid: b5a12fbee43748e4ca3207d21975d456, type: 2}
+  click:
+    Guid:
+      Data1: -808133366
+      Data2: 1180603984
+      Data3: -38398822
+      Data4: -983838833
+    Path: event:/Click editado
 --- !u!1 &833779992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2105875243803043128, guid: 17183ced05594534382ea92c7215924e, type: 3}
@@ -808,7 +837,8 @@ PrefabInstance:
       propertyPath: tutorialPanel
       value: 
       objectReference: {fileID: 1504665296}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4780479111856314373, guid: d983ae7d0798bbb4aa0ec08d7bf7390e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d983ae7d0798bbb4aa0ec08d7bf7390e, type: 3}
 --- !u!4 &1500463033 stripped
 Transform:

@@ -50,13 +50,13 @@ MonoBehaviour:
   objetoPrefab: {fileID: 8361804821120802354, guid: de2e9c7511db9a4479c4dc8d5ef49f28, type: 3}
   gelo: {fileID: 2166866741857577923, guid: 396fd5628fa460d4d9c6d78b55babcf7, type: 3}
   intervaloSpawn: 5
-  raioSpawn: 80
+  raioSpawn: 60
   pontoCentro: {fileID: 0}
   foodOnScreen: 0
   foodLimit: 5
   geloLimit: 3
   geloOnScreen: 0
-  geloCooldown: 60
+  geloCooldown: 10
   geloDesdeUltimoSpawn: 0
 --- !u!114 &448659370842363745
 MonoBehaviour:
@@ -76,18 +76,18 @@ MonoBehaviour:
   childOlhosNome: Olhos
   childGuelrasNome: Guelras
   prefabsModelo:
-  - {fileID: 5782458976093644175, guid: ee811468a76ac184590d61cc9a3bf24d, type: 3}
+  - {fileID: 6171937961376106134, guid: b47607912e303e543a6327d41b15ae20, type: 3}
   prefabsRabo:
-  - {fileID: 7003211025072054319, guid: eb2b6cf559704104a8f9d043db3b00f4, type: 3}
-  - {fileID: 7003211025072054319, guid: 7218a983311e3774481fc0b6ab6f8d52, type: 3}
+  - {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
+  - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
   prefabsBoca:
-  - {fileID: 2430817023866650263, guid: f770015317ba4f143a57d882f3d89152, type: 3}
-  - {fileID: 2882654885105224474, guid: 3f59af9eb2b063642ba657179c129911, type: 3}
-  - {fileID: 2430817023866650263, guid: e1db0e23f5332f04ea3bcef2e3fc113b, type: 3}
+  - {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
   prefabsOlhos:
-  - {fileID: 2300323273493271174, guid: e8543d51915f3384e86192bf13156fcd, type: 3}
+  - {fileID: 745039988511243743, guid: 756720d20b7171e4ab709e67278ada3c, type: 3}
   prefabsGuelras:
-  - {fileID: 960172307532907413, guid: 9c9da58ef1696ed49b111c8c07c8b6b8, type: 3}
+  - {fileID: 8851411522347403986, guid: 6ab209c88dbaecb45b28ef7451194e58, type: 3}
+  prefabsModeloAlly:
+  - {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
 --- !u!114 &448659370842363751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,26 +104,28 @@ MonoBehaviour:
   inimigoHerbivoro: 0
   aliado: 0
   prefabsInimigos:
-  - {fileID: 4668023493950496520, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+  - {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
   prefabsRabo:
-  - {fileID: 7003211025072054319, guid: eb2b6cf559704104a8f9d043db3b00f4, type: 3}
-  - {fileID: 7003211025072054319, guid: 7218a983311e3774481fc0b6ab6f8d52, type: 3}
+  - {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
+  - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
   prefabsBocaCarnivora:
   - {fileID: 2430817023866650263, guid: f770015317ba4f143a57d882f3d89152, type: 3}
   - {fileID: 2882654885105224474, guid: 3f59af9eb2b063642ba657179c129911, type: 3}
   prefabsBocaHerbivora:
-  - {fileID: 2430817023866650263, guid: e1db0e23f5332f04ea3bcef2e3fc113b, type: 3}
+  - {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
   prefabsOlhos:
-  - {fileID: 2300323273493271174, guid: e8543d51915f3384e86192bf13156fcd, type: 3}
+  - {fileID: 745039988511243743, guid: 756720d20b7171e4ab709e67278ada3c, type: 3}
   prefabsGuelras:
-  - {fileID: 960172307532907413, guid: 9c9da58ef1696ed49b111c8c07c8b6b8, type: 3}
+  - {fileID: 8851411522347403986, guid: 6ab209c88dbaecb45b28ef7451194e58, type: 3}
   childRaboNome: Rabo
   childBocaNome: Boca
   childOlhosNome: Olhos
   childGuelrasNome: Guelras
   player: {fileID: 0}
+  cooldownSpawn: 15
   enemySpawned: 0
   allySpawned: 1
+  gerarCaracteristicas: 1
 --- !u!114 &448659370842363749
 MonoBehaviour:
   m_ObjectHideFlags: 0
