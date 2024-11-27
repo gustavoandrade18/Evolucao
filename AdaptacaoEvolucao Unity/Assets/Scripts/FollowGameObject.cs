@@ -10,7 +10,7 @@ public class FollowGameObject : MonoBehaviour
     public float offsetY = 200f;
     private float tempo;  // Tempo para verificar a ausência do inimigo
     private Camera mainCamera;  // Referência à câmera principal
-
+    bool wasOcupied = false;
     void Start()
     {
         if (inimigoObject != null)
@@ -29,13 +29,15 @@ public class FollowGameObject : MonoBehaviour
     }
     void Update()
     {
+        if(inimigoObject != null)
+        {
+            wasOcupied = true;
+        }
         // Se não encontrar o inimigo, começa a contagem do tempo
         if (inimigoObject == null)
         {
-            tempo += Time.deltaTime;
-
             // Após 30 segundos sem encontrar o inimigo, destrói o objeto
-            if (tempo >= 30f)
+            if (wasOcupied == true)
             {
                 Destroy(gameObject);
             }

@@ -16,6 +16,8 @@ public class SelecionarButton : MonoBehaviour
     // Start is called before the first frame update
    public void PassaFase()
    {
+      clickAudio = RuntimeManager.CreateInstance(click);
+      clickAudio.start();
       if(requisitos)
       {
          SceneManager.LoadScene("Fase " + (salva.fase + 1));

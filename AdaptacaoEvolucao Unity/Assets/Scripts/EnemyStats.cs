@@ -91,19 +91,6 @@ public class EnemyStats : MonoBehaviour
                 tempo=0;
             }
         }
-       else if (Mathf.Abs(playerDistance.x) >= maxDistance && Mathf.Abs(playerDistance.y) >= maxDistance/0.56f)
-       {
-        npcSpawn = GameObject.Find("SpawnManager").GetComponent<NpcSpawn>();
-        if(carnivoro == true)
-        {
-            npcSpawn.inimigoCarnivoro--;
-        }
-        else if(carnivoro == false)
-        {
-            npcSpawn.inimigoHerbivoro--;
-        }
-        Destroy(gameObject);
-       }
         else
         {
             if(tempo>=1 && oxigenio < oxigenioMax)
@@ -112,6 +99,22 @@ public class EnemyStats : MonoBehaviour
                 tempo=0;
             }
             Wander();
+        }
+
+        if (Mathf.Abs(playerDistance.x) >= maxDistance || Mathf.Abs(playerDistance.y) >= maxDistance/0.56f)
+        {
+            npcSpawn = GameObject.Find("SpawnManager").GetComponent<NpcSpawn>();
+            if(carnivoro == true)
+            {
+                npcSpawn.inimigoCarnivoro--;
+                npcSpawn.tempoSpawnCarnivoro += npcSpawn.cooldownSpawn/1.3f;
+            }
+            else if(carnivoro == false)
+            {
+                npcSpawn.inimigoHerbivoro--;
+                npcSpawn.tempoSpawnHerbivoro += npcSpawn.cooldownSpawn/1.3f;
+            }
+            Destroy(gameObject);
         }
     }
 
@@ -220,7 +223,7 @@ public class EnemyStats : MonoBehaviour
         // Verifica se o objeto alcançou o alvo
         if (Vector3.Distance(transform.position, targetPosition) < 1.5f)
         {
-            targetPosition = new Vector3(Random.Range(-targetRange, targetRange),Random.Range(-targetRange, targetRange),0.0f);
+            targetPosition = new Vector3(Random.Range(-targetRange, targetRange) + player.transform.position.x ,Random.Range(-targetRange, targetRange),0.0f + player.transform.position.y);
         } 
         OutOfBoundsWander();
     }

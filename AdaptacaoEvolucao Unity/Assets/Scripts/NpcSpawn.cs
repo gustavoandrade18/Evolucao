@@ -7,8 +7,8 @@ public class NpcSpawn : MonoBehaviour
     public int inimigoCarnivoro=0;
     public int inimigoHerbivoro=0;
     public int aliado=0;
-    private float tempoSpawnCarnivoro;
-    private float tempoSpawnHerbivoro;
+    public float tempoSpawnCarnivoro;
+    public float tempoSpawnHerbivoro;
 
     //Gera as caracteristicas dos inimigos
     public GameObject[] prefabsInimigos;
@@ -151,7 +151,7 @@ public class NpcSpawn : MonoBehaviour
     Vector3 GetRandomSpawnPosition()
     {
         // Gera uma direção aleatória dentro de um círculo em um plano 2D
-        Vector2 randomDirection = Random.insideUnitCircle * 150f;
+        Vector2 randomDirection = Random.insideUnitCircle * 80f;
         return new Vector3(randomDirection.x, randomDirection.y,0) + player.transform.position; // Use Y como 0 se necessário
     }
 }

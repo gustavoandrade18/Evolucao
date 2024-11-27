@@ -400,7 +400,6 @@ public class Movimento : MonoBehaviour
                 onTriggerBoca.attack = true;
                 onTriggerBoca.boxCollider.size += new Vector2(onTriggerBoca.sizeIncrease, onTriggerBoca.sizeIncrease);
                 oxigenio -= oxigenioPattack;
-                Debug.Log("aa");
             }
             if(onTriggerBoca == null)
             {

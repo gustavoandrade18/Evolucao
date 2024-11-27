@@ -25,6 +25,10 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
+        if(pontoCentro == null)
+        {
+            pontoCentro = GameObject.FindGameObjectWithTag("Player").transform;
+        } 
         // Incrementa o tempo desde o último spawn
         tempoDesdeUltimoSpawn += Time.deltaTime;
         geloDesdeUltimoSpawn += Time.deltaTime;

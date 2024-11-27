@@ -9,9 +9,14 @@ public class OutOfBounds : MonoBehaviour
     public float thresholdDistanceY = 50.0f; // Distância a partir da qual consideramos "passou" no eixo Y
     public float randomOffsetRangeX = 20.0f; // Intervalo para o número aleatório no eixo X
     public float randomOffsetRangeY = 20.0f; // Intervalo para o número aleatório no eixo Y
+    public GameObject player;
 
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
         // Verifica todos os objetos com a tag "Inimigo"
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Inimigo");
         foreach (GameObject enemy in enemies)
@@ -26,7 +31,7 @@ public class OutOfBounds : MonoBehaviour
                 // Gera um número aleatório para o deslocamento em X
                 float randomOffsetX = Random.Range(-randomOffsetRangeX, randomOffsetRangeX);
                 // Reseta a posição do inimigo com deslocamento aleatório no eixo X
-                enemy.transform.position = new Vector3(thresholdPosition.x + randomOffsetX, enemy.transform.position.y, enemy.transform.position.z);
+                enemy.transform.position = new Vector3(thresholdPosition.x + randomOffsetX, enemy.transform.position.y, enemy.transform.position.z) + player.transform.position;
             }
 
             // Verifica se a distância Y ultrapassa o limite

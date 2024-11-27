@@ -8,7 +8,7 @@ public class SpeciesAlly : MonoBehaviour
 {
     public Canvas canvas;
     public Vector2 targetPosition;
-    public float targetRange=15.0f;
+    public float targetRange=30.0f;
     public float velocidadeRotacao=5.0f;
     public float speed = 10f;
     Movimento movimento;
@@ -90,7 +90,7 @@ public class SpeciesAlly : MonoBehaviour
         // Verifica se o objeto alcançou o alvo
         if (Vector3.Distance(transform.position, targetPosition) < 1.5f)
         {
-            targetPosition = new Vector3(Random.Range(-targetRange, targetRange),Random.Range(-targetRange, targetRange),0.0f);
+            targetPosition = new Vector3(Random.Range(-targetRange, targetRange) + player.transform.position.x ,Random.Range(-targetRange, targetRange)+ player.transform.position.y ,0.0f);
         } 
     }
 }
