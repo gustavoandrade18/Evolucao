@@ -17,6 +17,7 @@ public class SpawnManager : MonoBehaviour
     public int geloOnScreen;
     public float geloCooldown;
     public float geloDesdeUltimoSpawn;
+    public bool foodDestroyed;
 
     void Start()
     {
@@ -40,6 +41,11 @@ public class SpawnManager : MonoBehaviour
             {
                 SpawnObjeto(objetoPrefab);
                 tempoDesdeUltimoSpawn = 0f; // Reseta o tempo desde o último spawn
+            }
+            if (foodDestroyed)
+            {
+                SpawnObjeto(objetoPrefab);
+                foodDestroyed = false;
             }
         }
         else 

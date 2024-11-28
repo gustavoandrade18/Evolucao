@@ -17,12 +17,19 @@ public class FoodManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tempo+= Time.deltaTime;
+        tempo += Time.deltaTime;
 
         if(tempo> 50f)
         {
             Destroy(gameObject);
             spawnManager.foodOnScreen -= 1;
+        }
+    
+        if (Mathf.Abs(transform.position.x - spawnManager.pontoCentro.position.x) >= 60f || Mathf.Abs(transform.position.y - spawnManager.pontoCentro.position.y) >= 60f)
+        {
+            spawnManager.foodDestroyed = true;
+            spawnManager.foodOnScreen -= 1;
+            Destroy(gameObject);
         }
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4031345566515782003}
   m_Layer: 0
   m_Name: HotZone1
-  m_TagString: Untagged
+  m_TagString: HotZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,4 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movimento: {fileID: 5839491531430642641, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
   entrou: 0
-  temperaturaLocal: 35
+  temperaturaLocal: 25

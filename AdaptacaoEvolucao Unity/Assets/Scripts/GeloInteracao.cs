@@ -8,9 +8,11 @@ public class GeloInteracao : MonoBehaviour
     public GameObject objetoPrefab; 
     private float vida = 10;
     public Transform pontoCentro;
+    GameObject[] coldZones;
     // Start is called before the first frame update
     void Start()
     {
+        coldZones = GameObject.FindGameObjectsWithTag("ColdZone");
     }
 
     // Update is called once per frame
@@ -31,13 +33,17 @@ public class GeloInteracao : MonoBehaviour
         GameObject bocaPlayer = GameObject.FindGameObjectWithTag("BocaPlayer");
         onTriggerBoca = bocaPlayer.GetComponent<OnTriggerBoca>();
 
-         if (other.CompareTag("BocaPlayer"))
+        if (other.CompareTag("BocaPlayer"))
         {
             if(onTriggerBoca.attack == true && onTriggerBoca.quebraGelo)
             {
-             Debug.Log(vida);   
                 vida -= onTriggerBoca.dano;
             }
+        }
+        
+        if (other.CompareTag("HotZone") || other.CompareTag("NeutralZone"))
+        {
+            transform.position = coldZones[Random.Range(0, coldZones.Length)].transform.position + new Vector3(Random.Range(-7, +7), (Random.Range(-7, +7)),0);
         }
     }
 }

@@ -75,6 +75,8 @@ public class Movimento : MonoBehaviour
     private FMOD.Studio.EventInstance quimioAudio;
     [SerializeField] private EventReference nado;
     private FMOD.Studio.EventInstance nadoAudio;
+    [SerializeField] private EventReference grunhido;
+    private FMOD.Studio.EventInstance grunhidoAudio;
     // animacao
     [SerializeField] private Animator animator;
     //efeitos
@@ -88,6 +90,7 @@ public class Movimento : MonoBehaviour
 
         quimioAudio = RuntimeManager.CreateInstance(quimio);
         nadoAudio = RuntimeManager.CreateInstance(nado);
+        grunhidoAudio = RuntimeManager.CreateInstance(grunhido);
 
         BarraManager(ref vidaImage);
         BarraManager(ref oxigenioImage);
@@ -226,20 +229,25 @@ public class Movimento : MonoBehaviour
         }
         if (temperatura >= 25)
         {
-            fomeConsumo = fomeConsumoI * 2;
+            fomeConsumo = fomeConsumoI * 1.5f;
         }
-        if (temperatura >= 35 && tempo >=1)
+        else if (temperatura >= 35 && tempo >=1)
         {
             vida -= 1;
         }
-         if (temperatura <= 10)
+        else if (temperatura <= 10)
         {
-            fomeConsumo = fomeConsumoI * 2;
+            fomeConsumo = fomeConsumoI * 1.5f;
         }
-        if (temperatura <= 0 && tempo >=1)
+        else if (temperatura <= 0 && tempo >=1)
         {
             vida -= 1;
         }
+        else
+        {
+            fomeConsumo = fomeConsumoI;
+        }
+       
     }
 
     //Movimentacao da criatura
@@ -262,7 +270,7 @@ public class Movimento : MonoBehaviour
             // Aplica a rotação
             if(move.x != 0 || move.y != 0)
             {
-                if(tempoNado > 5f/(speed/walkSpeed))
+                if(tempoNado > 3.0f/(speed/walkSpeed)+ 1.5f)
                 {
                     nadoAudio.start();
                     tempoNado = 0f;
@@ -317,6 +325,7 @@ public class Movimento : MonoBehaviour
 
         if (closestAlly != null)
         {
+            grunhidoAudio.start();
             // Direção do objeto atual até o objeto mais próximo
             Vector2 direction = closestAlly.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -425,6 +434,7 @@ public class Movimento : MonoBehaviour
     }
     public void OnReproduzirRelease (InputValue value)
     {
-       reproduzir = false;
+        grunhidoAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        reproduzir = false;
     }
 }

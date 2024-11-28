@@ -18,6 +18,9 @@ TagManager:
   - Bubble
   - Guelra
   - Olho
+  - HotZone
+  - ColdZone
+  - NeutralZone
   layers:
   - Default
   - TransparentFX
