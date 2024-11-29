@@ -21,7 +21,7 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        tempoDesdeUltimoSpawn = 0f; // Inicializa o tempo desde o último spawn
+        tempoDesdeUltimoSpawn = -7f; // Inicializa o tempo desde o último spawn
     }
 
     void Update()

@@ -77,6 +77,8 @@ public class Movimento : MonoBehaviour
     private FMOD.Studio.EventInstance nadoAudio;
     [SerializeField] private EventReference grunhido;
     private FMOD.Studio.EventInstance grunhidoAudio;
+    [SerializeField] private EventReference mordida;
+    private FMOD.Studio.EventInstance mordidaAudio;
     // animacao
     [SerializeField] private Animator animator;
     //efeitos
@@ -91,6 +93,7 @@ public class Movimento : MonoBehaviour
         quimioAudio = RuntimeManager.CreateInstance(quimio);
         nadoAudio = RuntimeManager.CreateInstance(nado);
         grunhidoAudio = RuntimeManager.CreateInstance(grunhido);
+        mordidaAudio = RuntimeManager.CreateInstance(mordida);
 
         BarraManager(ref vidaImage);
         BarraManager(ref oxigenioImage);
@@ -406,6 +409,7 @@ public class Movimento : MonoBehaviour
             
             if(oxigenio >= oxigenioPattack && onTriggerBoca != null)
             {
+                mordidaAudio.start();
                 onTriggerBoca.attack = true;
                 onTriggerBoca.boxCollider.size += new Vector2(onTriggerBoca.sizeIncrease, onTriggerBoca.sizeIncrease);
                 oxigenio -= oxigenioPattack;

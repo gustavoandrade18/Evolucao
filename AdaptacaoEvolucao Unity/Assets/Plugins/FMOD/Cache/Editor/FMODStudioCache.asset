@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638683900551640861
+  lastModified: 638684708701290003
   FileSizes:
   - Name: Desktop
-    Value: 944
+    Value: 990
   Exists: 1
 --- !u!114 &-3587534917601838308
 MonoBehaviour:
@@ -122,13 +122,41 @@ MonoBehaviour:
   - {fileID: -3587534917601838308}
   - {fileID: 3758942108254472407}
   - {fileID: 8712860947177673568}
+  - {fileID: 959478739296798139}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3180362696733554211}
   StringsBanks:
   - {fileID: -7849670829442329960}
-  cacheTime: 638683900551640861
+  cacheTime: 638684708701290003
   cacheVersion: 131619
+--- !u!114 &959478739296798139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Mordida editada
+  m_EditorClassIdentifier: 
+  Path: event:/Mordida editada
+  Guid:
+    Data1: 1096152304
+    Data2: 1165841231
+    Data3: -578770008
+    Data4: 170630635
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 320
 --- !u!114 &3180362696733554211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,10 +172,10 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638683900551630639
+  lastModified: 638684708701280026
   FileSizes:
   - Name: Desktop
-    Value: 513344
+    Value: 526080
   Exists: 1
 --- !u!114 &3758942108254472407
 MonoBehaviour:

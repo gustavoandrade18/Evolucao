@@ -48,7 +48,7 @@ public class Level1Tutorial : MonoBehaviour
             reproducao = 0f;
         }
     }
-     public void OnAttackPress (InputValue value)
+     public void OnTutorial (InputValue value)
     {
        
             if(tempo >= 2.5f && textoQuantidade != 7) 

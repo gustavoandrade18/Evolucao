@@ -31,6 +31,7 @@ public class GeraCaracteristicas : MonoBehaviour
     NpcSpawn npcSpawn;
     GameObject ally;
     SpeciesAlly speciesAlly;
+    public int allyQuantity;
     
     
     // Start is called before the first frame update
@@ -108,8 +109,12 @@ public class GeraCaracteristicas : MonoBehaviour
         
             // Substitui as guelras
             ReplaceChild(childGuelras, prefabGuelras, aliado);
-
-            npcSpawn.allySpawned = false;
+            
+            if(allyQuantity >=2)
+            {
+                npcSpawn.allySpawned = false;
+            }
+            allyQuantity++;
         }
     }
 

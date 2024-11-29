@@ -23,6 +23,7 @@ public class OnTriggerBoca : MonoBehaviour
     public GameObject player;
     float start=0f;
     public bool quebraGelo = false;
+    public bool recebeMais= false;
 
     /*void SetPlayer(GameObject player) {
         this.player = player; 
@@ -32,6 +33,10 @@ public class OnTriggerBoca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(recebeMais)
+        {
+            alimento = 35f;
+        }
         if (transform.parent.CompareTag("Inimigo"))
         {
             // Obtém o script EnemyStats do objeto pai
@@ -112,6 +117,7 @@ public class OnTriggerBoca : MonoBehaviour
                 if(transform.parent.CompareTag("Player"))
                 {
                     movimento.fome +=  alimento;
+                    movimento.vida += movimento.vidaTotal/25f;
                     movimento.exp += 5;
                 }
                 Destroy(other.gameObject);
@@ -124,6 +130,7 @@ public class OnTriggerBoca : MonoBehaviour
                 if(transform.parent.CompareTag("Player"))
                 {
                     movimento.fome +=  alimento;
+                    movimento.vida += movimento.vidaTotal/25f;
                     movimento.exp += 5;
                 }
                 Destroy(other.gameObject);

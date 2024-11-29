@@ -112,6 +112,7 @@ MonoBehaviour:
   fugidinhaCooldown: 0
   player: {fileID: 0}
   quebraGelo: 1
+  recebeMais: 0
 --- !u!61 &4446853732781741909
 BoxCollider2D:
   m_ObjectHideFlags: 0

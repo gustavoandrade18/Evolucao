@@ -20,7 +20,8 @@ public class SelecionarButton : MonoBehaviour
       clickAudio.start();
       if(requisitos)
       {
-         SceneManager.LoadScene("Fase " + (salva.fase + 1));
+         salva.fase += 1;
+         SceneManager.LoadScene("Fase " + salva.fase);
       }
       else
       {
