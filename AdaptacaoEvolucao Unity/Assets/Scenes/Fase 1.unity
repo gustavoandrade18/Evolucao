@@ -224,35 +224,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &603936429 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 448659370775863318, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
-  m_PrefabInstance: {fileID: 1808061912}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &603936435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603936429}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df95e128b497b75498050f0e91b0f201, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 1279691891208671990, guid: 9bddb7fb23278af4a93b4a490173fd99, type: 3}
-  spawnRadiusX: 30
-  spawnRadiusY: 15
-  maxDistanceX: 27
-  maxDistanceY: 16
-  spawnInterval: 0.1
-  player: {fileID: 1500463033}
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 33
-  maxBubbles: 5
-  forwardSpawnFactor: 6
 --- !u!1 &626166435
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +426,7 @@ MonoBehaviour:
       Data3: -38398822
       Data4: -983838833
     Path: event:/Click editado
+  animator: {fileID: 1500463039}
 --- !u!1 &833779992 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2105875243803043128, guid: 17183ced05594534382ea92c7215924e, type: 3}
@@ -959,11 +931,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1500463033 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
-  m_PrefabInstance: {fileID: 1000741748098738725}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1500463039
 Animator:
   serializedVersion: 5
@@ -1068,11 +1035,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363749, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: thresholdDistanceX
-      value: 2000
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363749, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: thresholdDistanceY
-      value: 2000
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: player
@@ -1137,7 +1104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0000001
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_LocalScale.z
@@ -1186,6 +1153,10 @@ PrefabInstance:
     - target: {fileID: 5530854994684541851, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_Name
       value: Player Fase 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: exp
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: expText
@@ -1254,6 +1225,14 @@ PrefabInstance:
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: quimio.Guid.Data4
       value: -131804240
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132696994438665654, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b427ecf52ccf4c46a66a9c482ce7f9d, type: 3}
+    - target: {fileID: 9132696994438665654, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}

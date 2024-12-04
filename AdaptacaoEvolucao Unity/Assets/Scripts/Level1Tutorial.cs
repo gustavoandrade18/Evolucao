@@ -20,6 +20,8 @@ public class Level1Tutorial : MonoBehaviour
     //audio
     [SerializeField] private EventReference click;
     private FMOD.Studio.EventInstance clickAudio;
+    //
+    [SerializeField] private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +35,12 @@ public class Level1Tutorial : MonoBehaviour
     {
         Tutorial();
 
-        if(movimento.reproduzir && movimento.level >= 1) 
+        if(movimento.reproduzir == true && movimento.level >= 1 || reproducao >=2.2f) 
         {
+            if(reproducao == 0f)
+            {
+                animator.SetBool("Reproduzir", true);
+            }
             
             reproducao += Time.deltaTime;
             if(reproducao >= 3f)
@@ -43,9 +49,10 @@ public class Level1Tutorial : MonoBehaviour
                 salva.fase = 1;
             }
         }
-        else if(movimento.reproduzir == false)
+        else if(movimento.reproduzir == false && reproducao <= 2.2f)
         {
             reproducao = 0f;
+            animator.SetBool("Reproduzir", false);
         }
     }
      public void OnTutorial (InputValue value)

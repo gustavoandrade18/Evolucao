@@ -111,6 +111,7 @@ MonoBehaviour:
   oxigenioConsumo: 2
   oxigenioRegenera: 2
   oxigenioPattack: 2
+  visao: 0
   vidaTotal: 100
   vida: 0
   vidaAcressimo: 20
@@ -128,6 +129,7 @@ MonoBehaviour:
   coldResistance: 0
   heatResistance: 0
   onTriggerBoca: {fileID: 0}
+  dano: 0
   exp: 0
   expMax: 180
   expPassiveGain: 1
@@ -141,6 +143,36 @@ MonoBehaviour:
   reproduzir: 0
   minDistance: 10
   canvas: {fileID: 0}
+  quimio:
+    Guid:
+      Data1: 1609464254
+      Data2: 1110466376
+      Data3: -1323198544
+      Data4: -131804240
+    Path: event:/Hfx- Quimiossintese
+  nado:
+    Guid:
+      Data1: 418484611
+      Data2: 1157003996
+      Data3: -1584439156
+      Data4: -627796805
+    Path: event:/Nado
+  grunhido:
+    Guid:
+      Data1: -2114531353
+      Data2: 1275824671
+      Data3: -1464933218
+      Data4: -298279958
+    Path: event:/Grunhido1
+  mordida:
+    Guid:
+      Data1: 1096152304
+      Data2: 1165841231
+      Data3: -578770008
+      Data4: 170630635
+    Path: event:/Mordida editada
+  animator: {fileID: 0}
+  fumacaPrefab: {fileID: 209103260801149857, guid: d0febcca11264554b90016f5a6c96c4c, type: 3}
 --- !u!114 &150475513578901440
 MonoBehaviour:
   m_ObjectHideFlags: 0
