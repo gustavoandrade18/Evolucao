@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class GeloInteracao : MonoBehaviour
 {
@@ -9,9 +10,17 @@ public class GeloInteracao : MonoBehaviour
     private float vida = 10;
     public Transform pontoCentro;
     GameObject[] coldZones;
+    //
+    [SerializeField] private EventReference rachando;
+    private FMOD.Studio.EventInstance rachandoAudio;
+    [SerializeField] private EventReference quebrando;
+    private FMOD.Studio.EventInstance quebrandoAudio;
     // Start is called before the first frame update
     void Start()
     {
+        rachandoAudio = RuntimeManager.CreateInstance(rachando);
+        quebrandoAudio = RuntimeManager.CreateInstance(quebrando);
+
         coldZones = GameObject.FindGameObjectsWithTag("ColdZone");
     }
 
@@ -23,6 +32,7 @@ public class GeloInteracao : MonoBehaviour
             if(objetoPrefab != null)
             {
                 Vector2 pontoSpawn = pontoCentro.position;
+                quebrandoAudio.start();
                 Instantiate(objetoPrefab, pontoSpawn, Quaternion.identity);
             }
             Destroy(gameObject);
@@ -37,6 +47,7 @@ public class GeloInteracao : MonoBehaviour
         {
             if(onTriggerBoca.attack == true && onTriggerBoca.quebraGelo)
             {
+                rachandoAudio.start();
                 vida -= onTriggerBoca.dano;
             }
         }

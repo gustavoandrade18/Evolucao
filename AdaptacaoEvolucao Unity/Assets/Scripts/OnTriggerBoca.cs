@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class OnTriggerBoca : MonoBehaviour
@@ -63,6 +62,7 @@ public class OnTriggerBoca : MonoBehaviour
             {
                 movimento = player.GetComponent<Movimento>();
                 boxCollider = GetComponent<BoxCollider2D>();
+                boxColliderI = boxCollider.size;
             }
         }
         start += Time.deltaTime;
@@ -100,7 +100,7 @@ public class OnTriggerBoca : MonoBehaviour
         {
             tempo += Time.deltaTime;
         }
-        if(attack==true && tempo>=0.1)
+        if(attack==true && tempo>=0.2f)
         {
             attack=false;
             tempo=0;
@@ -141,6 +141,7 @@ public class OnTriggerBoca : MonoBehaviour
 
         if (other.CompareTag("Player") && transform.parent.CompareTag("Inimigo") && cooldown > 2.0f)
         {
+            boxCollider.size += new Vector2(sizeIncrease, sizeIncrease);
             cooldown =0;
             fugidinha = true;
             movimento.vida -= dano;

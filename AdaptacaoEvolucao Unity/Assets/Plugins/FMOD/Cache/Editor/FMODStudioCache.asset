@@ -15,11 +15,65 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638689037926051840
+  lastModified: 638689919351208086
   FileSizes:
   - Name: Desktop
-    Value: 990
+    Value: 1216
   Exists: 1
+--- !u!114 &-7506444344197271572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/gelo rachando
+  m_EditorClassIdentifier: 
+  Path: event:/gelo rachando
+  Guid:
+    Data1: -12509387
+    Data2: 1078428960
+    Data3: -1504354152
+    Data4: 1374729430
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 311
+--- !u!114 &-5907105360647823852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Congelamento editado
+  m_EditorClassIdentifier: 
+  Path: event:/Congelamento editado
+  Guid:
+    Data1: -610641034
+    Data2: 1128622794
+    Data3: 945166779
+    Data4: 1451985572
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 22500
 --- !u!114 &-3587534917601838308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +128,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 270
+--- !u!114 &-422279490443928207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/grunhido1
+  m_EditorClassIdentifier: 
+  Path: event:/grunhido1
+  Guid:
+    Data1: -2114531353
+    Data2: 1275824671
+    Data3: -1464933218
+    Data4: -298279958
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1360
 --- !u!114 &-340324753341540084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,14 +202,18 @@ MonoBehaviour:
   - {fileID: -3301960057086762743}
   - {fileID: -3587534917601838308}
   - {fileID: 3758942108254472407}
-  - {fileID: 8712860947177673568}
   - {fileID: 959478739296798139}
+  - {fileID: 1181043629158048067}
+  - {fileID: -7506444344197271572}
+  - {fileID: -422279490443928207}
+  - {fileID: 3715711282066255958}
+  - {fileID: -5907105360647823852}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3180362696733554211}
   StringsBanks:
   - {fileID: -7849670829442329960}
-  cacheTime: 638689037926051840
+  cacheTime: 638689919351208086
   cacheVersion: 131619
 --- !u!114 &959478739296798139
 MonoBehaviour:
@@ -157,6 +242,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 320
+--- !u!114 &1181043629158048067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/gelo quebrando editado
+  m_EditorClassIdentifier: 
+  Path: event:/gelo quebrando editado
+  Guid:
+    Data1: 1977812754
+    Data2: 1169045200
+    Data3: 1799609477
+    Data4: -730017406
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 311
 --- !u!114 &3180362696733554211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,11 +284,38 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638689037926041858
+  lastModified: 638689919351198113
   FileSizes:
   - Name: Desktop
-    Value: 526080
+    Value: 1392000
   Exists: 1
+--- !u!114 &3715711282066255958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Aquecimento editado
+  m_EditorClassIdentifier: 
+  Path: event:/Aquecimento editado
+  Guid:
+    Data1: -105631415
+    Data2: 1082740071
+    Data3: 301836986
+    Data4: 1277601444
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 28709
 --- !u!114 &3758942108254472407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,30 +343,3 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 106
---- !u!114 &8712860947177673568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Grunhido1
-  m_EditorClassIdentifier: 
-  Path: event:/Grunhido1
-  Guid:
-    Data1: -2114531353
-    Data2: 1275824671
-    Data3: -1464933218
-    Data4: -298279958
-  Banks:
-  - {fileID: 3180362696733554211}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1360

@@ -63,6 +63,7 @@ public class SpeciesAlly : MonoBehaviour
             if(tempo >= 5f)
             {
                 SceneManager.LoadScene("Selecao de criatura 1");
+                movimento.grunhidoAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
         }
         else

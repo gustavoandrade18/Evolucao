@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{9dd281a1-182e-4f95-b507-3810b4eec0f7}">
+		<property name="assetPath">
+			<value>gelo quebrando editado.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.38162499999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f6d7563-a468-4216-a4e4-02c1ae12e06d}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -30,6 +30,7 @@ public class Movimento : MonoBehaviour
     public int oxigenioPattack;
     bool atacado = false;
     public float visao;
+    bool reproduzirAudio = true;
     //variaveis do void Playerstats (vida)
     public float vidaTotal=100.0f;
     public float vida;
@@ -76,15 +77,19 @@ public class Movimento : MonoBehaviour
     [SerializeField] private EventReference nado;
     private FMOD.Studio.EventInstance nadoAudio;
     [SerializeField] private EventReference grunhido;
-    private FMOD.Studio.EventInstance grunhidoAudio;
+    public FMOD.Studio.EventInstance grunhidoAudio;
     [SerializeField] private EventReference mordida;
     private FMOD.Studio.EventInstance mordidaAudio;
+    [SerializeField] private EventReference congelando;
+    private FMOD.Studio.EventInstance congelandoAudio;
+    [SerializeField] private EventReference esquentando;
+    private FMOD.Studio.EventInstance esquentandoAudio;
     // animacao
     [SerializeField] private Animator animator;
     //efeitos
     public GameObject fumacaPrefab;
     private GameObject fumaca;
-
+    bool temperaturaAudio = false;
 
     void Start()
     {
@@ -94,6 +99,8 @@ public class Movimento : MonoBehaviour
         nadoAudio = RuntimeManager.CreateInstance(nado);
         grunhidoAudio = RuntimeManager.CreateInstance(grunhido);
         mordidaAudio = RuntimeManager.CreateInstance(mordida);
+        esquentandoAudio = RuntimeManager.CreateInstance(esquentando);
+        congelandoAudio = RuntimeManager.CreateInstance(congelando);
 
         BarraManager(ref vidaImage);
         BarraManager(ref oxigenioImage);
@@ -234,21 +241,37 @@ public class Movimento : MonoBehaviour
         {
             fomeConsumo = fomeConsumoI * 1.5f;
         }
-        else if (temperatura >= 35 && tempo >=1)
+        if (temperatura >= 35 && tempo >=1)
         {
+            if(temperaturaAudio == false)
+            {
+                esquentandoAudio.start();
+                temperaturaAudio=true;
+            }
             vida -= 1;
         }
-        else if (temperatura <= 10)
+        if (temperatura <= 10)
         {
             fomeConsumo = fomeConsumoI * 1.5f;
         }
-        else if (temperatura <= 0 && tempo >=1)
+        if (temperatura <= 0 && tempo >=1)
         {
+            if(temperaturaAudio == false)
+            {
+                congelandoAudio.start();
+                temperaturaAudio=true;
+            }
             vida -= 1;
         }
         else
         {
             fomeConsumo = fomeConsumoI;
+        }
+        if(temperatura > 0 && temperatura < 35)
+        {
+            esquentandoAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            congelandoAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            temperaturaAudio = false;
         }
        
     }
@@ -326,9 +349,14 @@ public class Movimento : MonoBehaviour
         // Encontrar o objeto mais próximo com a tag "Aliado"
         GameObject closestAlly = FindClosestAlly();
 
+        if(reproduzirAudio)
+        {
+            grunhidoAudio.start();  
+            reproduzirAudio = false;
+            Debug.Log("ReproduzirAudio");
+        }
         if (closestAlly != null)
         {
-            grunhidoAudio.start();
             // Direção do objeto atual até o objeto mais próximo
             Vector2 direction = closestAlly.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -411,7 +439,7 @@ public class Movimento : MonoBehaviour
             {
                 mordidaAudio.start();
                 onTriggerBoca.attack = true;
-                onTriggerBoca.boxCollider.size += new Vector2(onTriggerBoca.sizeIncrease, onTriggerBoca.sizeIncrease);
+                onTriggerBoca.boxCollider.size += new Vector2(onTriggerBoca.sizeIncrease, onTriggerBoca.sizeIncrease*2f);
                 oxigenio -= oxigenioPattack;
             }
             if(onTriggerBoca == null)
@@ -440,5 +468,6 @@ public class Movimento : MonoBehaviour
     {
         grunhidoAudio.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         reproduzir = false;
+        reproduzirAudio=true;
     }
 }

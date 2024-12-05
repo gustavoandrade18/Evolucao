@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: exp
-      value: 0
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: expImage
@@ -228,6 +228,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4855540842997872222, guid: 9f8c40ddd0f34914e8c5884d93ea8f3f, type: 3}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: congelando.Path
+      value: event:/Congelamento editado
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: nado.Guid.Data1
       value: 418484611
       objectReference: {fileID: 0}
@@ -242,6 +246,10 @@ PrefabInstance:
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: nado.Guid.Data4
       value: -627796805
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: esquentando.Path
+      value: event:/Aquecimento editado
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: temperatureImage
@@ -299,6 +307,38 @@ PrefabInstance:
       propertyPath: grunhido.Guid.Data4
       value: -298279958
       objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: congelando.Guid.Data1
+      value: -610641034
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: congelando.Guid.Data2
+      value: 1128622794
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: congelando.Guid.Data3
+      value: 945166779
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: congelando.Guid.Data4
+      value: 1451985572
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: esquentando.Guid.Data1
+      value: -105631415
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: esquentando.Guid.Data2
+      value: 1082740071
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: esquentando.Guid.Data3
+      value: 301836986
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: esquentando.Guid.Data4
+      value: 1277601444
+      objectReference: {fileID: 0}
     - target: {fileID: 9132696994438665654, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -329,6 +369,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.035822865, y: 0.071645014}
-  m_Size: {x: 2.178869, y: 4.325383}
+  m_Offset: {x: -0.0076856604, y: 0.6906702}
+  m_Size: {x: 2.2351434, y: 5.5634336}
   m_Direction: 0

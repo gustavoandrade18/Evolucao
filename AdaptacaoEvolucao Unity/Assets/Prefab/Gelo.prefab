@@ -103,6 +103,20 @@ MonoBehaviour:
   onTriggerBoca: {fileID: 0}
   objetoPrefab: {fileID: 8361804821120802354, guid: de2e9c7511db9a4479c4dc8d5ef49f28, type: 3}
   pontoCentro: {fileID: 2166866741857577926}
+  rachando:
+    Guid:
+      Data1: -12509387
+      Data2: 1078428960
+      Data3: -1504354152
+      Data4: 1374729430
+    Path: event:/gelo rachando
+  quebrando:
+    Guid:
+      Data1: 1977812754
+      Data2: 1169045200
+      Data3: 1799609477
+      Data4: -730017406
+    Path: event:/gelo quebrando editado
 --- !u!50 &2166866741857577924
 Rigidbody2D:
   serializedVersion: 4

@@ -264,11 +264,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363749, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: thresholdDistanceX
-      value: 260
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363749, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: thresholdDistanceY
-      value: 300
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
+      propertyPath: inimigoCarnivoro
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
@@ -338,7 +342,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &981555342
 PrefabInstance:
@@ -850,7 +854,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4476419466431535329, guid: 24cd40943df0b9f468dc3747ca2e7e32, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4476419466431535329, guid: 24cd40943df0b9f468dc3747ca2e7e32, type: 3}
       propertyPath: m_LocalPosition.x

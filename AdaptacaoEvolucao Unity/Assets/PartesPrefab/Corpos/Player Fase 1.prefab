@@ -171,6 +171,20 @@ MonoBehaviour:
       Data3: -578770008
       Data4: 170630635
     Path: event:/Mordida editada
+  congelando:
+    Guid:
+      Data1: -610641034
+      Data2: 1128622794
+      Data3: 945166779
+      Data4: 1451985572
+    Path: event:/Congelamento editado
+  esquentando:
+    Guid:
+      Data1: -105631415
+      Data2: 1082740071
+      Data3: 301836986
+      Data4: 1277601444
+    Path: event:/Aquecimento editado
   animator: {fileID: 0}
   fumacaPrefab: {fileID: 209103260801149857, guid: d0febcca11264554b90016f5a6c96c4c, type: 3}
 --- !u!114 &150475513578901440

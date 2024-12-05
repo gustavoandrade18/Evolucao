@@ -138,4 +138,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movimento: {fileID: 5839491531430642641, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
   entrou: 0
-  temperaturaLocal: 36
+  temperaturaLocal: 37
