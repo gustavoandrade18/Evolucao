@@ -54,7 +54,7 @@ public class GeloInteracao : MonoBehaviour
         
         if (other.CompareTag("HotZone") || other.CompareTag("NeutralZone"))
         {
-            transform.position = coldZones[Random.Range(0, coldZones.Length)].transform.position + new Vector3(Random.Range(-7, +7), (Random.Range(-7, +7)),0);
+            transform.position = coldZones[Random.Range(0, coldZones.Length)].transform.position + new Vector3(Random.Range(-10, +10), (Random.Range(-10, +10)),0);
         }
     }
 }

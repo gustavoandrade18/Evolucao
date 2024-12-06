@@ -217,6 +217,7 @@ public class Movimento : MonoBehaviour
         {   
             if(temperatura > 0 && temperatura < 35)
             {
+                fome -= 0.6f;
                 vida += 1;
             }
         }
@@ -263,7 +264,7 @@ public class Movimento : MonoBehaviour
             }
             vida -= 1;
         }
-        else
+        if(temperatura > 10 && temperatura < 25)
         {
             fomeConsumo = fomeConsumoI;
         }
@@ -371,19 +372,16 @@ public class Movimento : MonoBehaviour
     {
         GameObject[] aliados = GameObject.FindGameObjectsWithTag("Aliado");
         GameObject closest = null;
-        minDistance = 10f;
+        minDistance = 14f;
 
         foreach (GameObject aliado in aliados)
         {
             float distance = Vector3.Distance(transform.position, aliado.transform.position);
-            if(distance < 10f)
-            {
                 if (distance < minDistance)
                 {
                     minDistance = distance;
                     closest = aliado;
                 }
-            }
         }
 
         return closest;

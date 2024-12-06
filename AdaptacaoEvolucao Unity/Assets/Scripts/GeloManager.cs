@@ -19,7 +19,7 @@ public class GeloManager : MonoBehaviour
     {
         tempo+= Time.deltaTime;
 
-        if(tempo> 50f)
+        if(tempo> 30f)
         {
             spawnManager.geloOnScreen -= 1;
             Destroy(gameObject);

@@ -57,7 +57,9 @@ public class SpawnManager : MonoBehaviour
         {
             if (geloDesdeUltimoSpawn >= geloCooldown)
             {
+                raioSpawn = raioSpawn * 2;
                 SpawnObjeto(gelo);
+                raioSpawn = raioSpawn / 2;
                 geloDesdeUltimoSpawn = 0f; // Reseta o tempo desde o último spawn
             }
         }

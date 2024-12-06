@@ -13,16 +13,33 @@ public class SpeciesAlly : MonoBehaviour
     public float speed = 10f;
     Movimento movimento;
     public GameObject player;
-    float distanciaMinima=10f;
+    float distanciaMinima=14f;
     float tempo;
     public TMP_Text textoPrefab;
     TMP_Text allyText;
     FollowGameObject followGameObject;
     NpcSpawn npcSpawn;
+    private CapsuleCollider2D capsuleCollider;
+    [SerializeField] EvolucaoEntreCenas salva;
+    //
+    public float raycastDistance = 8f;     // Distância do Raycast
+    public LayerMask Default;        // Camada dos obstáculos
+    float tempoRaycast;
+
     // Start is called before the first frame update
     void Start()
     {
+        string nomeCena = SceneManager.GetActiveScene().name;
+
+        // Extrai o número da fase usando o método de substring
+        string numeroFaseStr = nomeCena.Replace("Fase ", "");  // Remove "Fase " do nome
+        int numeroFase;
         
+        // Tenta converter o número extraído em um inteiro
+        if (int.TryParse(numeroFaseStr, out numeroFase))
+        {
+            salva.fase = numeroFase;
+        }
         // Canvas
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         allyText = Instantiate(textoPrefab);
@@ -33,7 +50,9 @@ public class SpeciesAlly : MonoBehaviour
 
         targetPosition = Random.insideUnitCircle.normalized;
 
-        
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        transform.localScale += new Vector3(0.1f,0.1f,0);
+        capsuleCollider.size += new Vector2(0.1f,0.1f);
     }
 
     // Update is called once per frame
@@ -45,6 +64,18 @@ public class SpeciesAlly : MonoBehaviour
             movimento = player.GetComponent<Movimento>();
         }
         float distance = Vector3.Distance(transform.position, player.transform.position);
+        //
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, raycastDistance, Default);
+        tempoRaycast += Time.deltaTime;
+        if (hit.collider != null)
+        {
+            // Verifica se o objeto colidido tem um Collider2D
+            if (hit.collider.GetComponent<Collider2D>() != null && tempoRaycast >=2f)
+            {
+              targetPosition = new Vector3(Random.Range(-targetRange, targetRange) + player.transform.position.x ,Random.Range(-targetRange, targetRange)+ player.transform.position.y ,0.0f);
+              tempoRaycast=0f;  
+            }
+        }
 
         if(distance < distanciaMinima && movimento.reproduzir == true && movimento.level >= 1)
         {

@@ -130,3 +130,8 @@ MonoBehaviour:
   speed: 10
   player: {fileID: 0}
   textoPrefab: {fileID: 5871004678103741047, guid: 5a160b4327c76e849b1977ef23117ee7, type: 3}
+  salva: {fileID: 11400000, guid: b5a12fbee43748e4ca3207d21975d456, type: 2}
+  raycastDistance: 8
+  Default:
+    serializedVersion: 2
+    m_Bits: 1

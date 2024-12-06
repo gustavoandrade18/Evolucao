@@ -19,7 +19,7 @@ public class FoodManager : MonoBehaviour
     {
         tempo += Time.deltaTime;
 
-        if(tempo> 50f)
+        if(tempo> 25f)
         {
             Destroy(gameObject);
             spawnManager.foodOnScreen -= 1;
