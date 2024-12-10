@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 448659370842363745}
   - component: {fileID: 448659370842363751}
   - component: {fileID: 448659370842363749}
+  - component: {fileID: -1568892382760378229}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -58,6 +59,7 @@ MonoBehaviour:
   geloOnScreen: 0
   geloCooldown: 10
   geloDesdeUltimoSpawn: 0
+  foodDestroyed: 0
 --- !u!114 &448659370842363745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,12 +84,14 @@ MonoBehaviour:
   - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
   prefabsBoca:
   - {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
+  - {fileID: 3935436590981040464, guid: dda79f8c7bf58c949a55bd356d0ee84e, type: 3}
   prefabsOlhos:
   - {fileID: 745039988511243743, guid: 756720d20b7171e4ab709e67278ada3c, type: 3}
   prefabsGuelras:
   - {fileID: 8851411522347403986, guid: 6ab209c88dbaecb45b28ef7451194e58, type: 3}
   prefabsModeloAlly:
   - {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
+  allyQuantity: 0
 --- !u!114 &448659370842363751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,14 +107,15 @@ MonoBehaviour:
   inimigoCarnivoro: 0
   inimigoHerbivoro: 0
   aliado: 0
+  tempoSpawnCarnivoro: 0
+  tempoSpawnHerbivoro: 0
   prefabsInimigos:
   - {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
   prefabsRabo:
   - {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
   - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
   prefabsBocaCarnivora:
-  - {fileID: 2430817023866650263, guid: f770015317ba4f143a57d882f3d89152, type: 3}
-  - {fileID: 2882654885105224474, guid: 3f59af9eb2b063642ba657179c129911, type: 3}
+  - {fileID: 3935436590981040464, guid: dda79f8c7bf58c949a55bd356d0ee84e, type: 3}
   prefabsBocaHerbivora:
   - {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
   prefabsOlhos:
@@ -139,7 +144,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thresholdPosition: {x: 0, y: 0}
-  thresholdDistanceX: 94
-  thresholdDistanceY: 37
+  thresholdDistanceX: 225
+  thresholdDistanceY: 225
   randomOffsetRangeX: 60
   randomOffsetRangeY: 30
+  player: {fileID: 0}
+--- !u!114 &-1568892382760378229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445ca474b70346c479042e035b732e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

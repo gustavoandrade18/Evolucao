@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class OnTriggerBoca : MonoBehaviour
 {
@@ -16,14 +17,17 @@ public class OnTriggerBoca : MonoBehaviour
     public bool carnivoro = true;
     public EnemyStats enemyStats;
     public float dano = 0;
-    public float cooldown;
     public bool fugidinha;
     public float fugidinhaCooldown;
     public GameObject player;
     float start=0f;
     public bool quebraGelo = false;
     public bool recebeMais= false;
-
+    private bool alrAttacked = false;
+    [SerializeField] private EventReference mordida;
+    private FMOD.Studio.EventInstance mordidaAudio;
+    //
+    [SerializeField] private Animator mordeu;
     /*void SetPlayer(GameObject player) {
         this.player = player; 
     }*/
@@ -32,7 +36,8 @@ public class OnTriggerBoca : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(recebeMais)
+        mordidaAudio = RuntimeManager.CreateInstance(mordida);
+        if(recebeMais == true)
         {
             alimento = 35f;
         }
@@ -75,7 +80,6 @@ public class OnTriggerBoca : MonoBehaviour
         {
             LateStart();
         }
-        cooldown += Time.deltaTime;
         if (fugidinha==true)
         {
             fugidinhaCooldown += Time.deltaTime;
@@ -98,6 +102,14 @@ public class OnTriggerBoca : MonoBehaviour
 
         if(attack==true)
         {
+            if(tempo == 0 && movimento.sprint == true)
+            {
+                movimento.speed = movimento.sprintSpeed * 1.4f;
+            }
+            if(tempo == 0 && movimento.sprint == false)
+            {
+                movimento.speed = movimento.walkSpeed * 1.4f;
+            }
             tempo += Time.deltaTime;
         }
         if(attack==true && tempo>=0.2f)
@@ -105,6 +117,20 @@ public class OnTriggerBoca : MonoBehaviour
             attack=false;
             tempo=0;
             boxCollider.size = boxColliderI;
+            //
+            if(movimento.sprint == true)
+            {
+                movimento.speed = movimento.sprintSpeed;
+            }
+            if(movimento.sprint == false)
+            {
+                movimento.speed = movimento.walkSpeed;
+            }
+        }
+        if(alrAttacked && spawnManager.cooldown > 1f)
+        {
+            boxCollider.size = boxColliderI;
+            alrAttacked = false;
         }
     }
 
@@ -119,8 +145,8 @@ public class OnTriggerBoca : MonoBehaviour
                     movimento.fome +=  alimento;
                     movimento.vida += movimento.vidaTotal/25f;
                     movimento.exp += 5;
+                    Destroy(other.gameObject);
                 }
-                Destroy(other.gameObject);
             }
         } 
         if (other.CompareTag("Planta") && carnivoro == false)
@@ -135,18 +161,22 @@ public class OnTriggerBoca : MonoBehaviour
                 }
                 Destroy(other.gameObject);
                 spawnManager.foodOnScreen -= 1;
-                attack = false;
+                attack = true;
             }
         } 
 
-        if (other.CompareTag("Player") && transform.parent.CompareTag("Inimigo") && cooldown > 2.0f)
+        if (other.CompareTag("Player") && transform.parent.CompareTag("Inimigo") && spawnManager.cooldown > 2.0f)
         {
-            boxCollider.size += new Vector2(sizeIncrease, sizeIncrease);
-            cooldown =0;
+            mordeu.SetTrigger("Mordeu");
+            mordidaAudio.start();
+            boxCollider.size -= new Vector2(1f, 1f);
+            spawnManager.cooldown = 0;
             fugidinha = true;
             movimento.vida -= dano;
             movimento.speed = movimento.sprintSpeed * 1.2f;
+            alrAttacked = true;
         } 
 
     }
+ 
 }

@@ -80,7 +80,7 @@ public Vector3[] posicoes; // Array para armazenar as posições correspondentes
 
         }
         Movimento movimento = criatura[criaturaNumber].GetComponent<Movimento>();
-        movimento.fomeConsumoI += (float)olhoNumero[criaturaNumber] / 2 + (float)raboNumero[criaturaNumber] / 2 + (float)bocaNumero[criaturaNumber] / 2;
+        movimento.fomeConsumoI += (float)olhoNumero[criaturaNumber] / 4 + (float)raboNumero[criaturaNumber] / 4 + (float)bocaNumero[criaturaNumber] / 4;
         criaturaNumber++;
         }
     }

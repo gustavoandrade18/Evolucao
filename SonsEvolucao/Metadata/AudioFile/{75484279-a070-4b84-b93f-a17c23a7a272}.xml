@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{75484279-a070-4b84-b93f-a17c23a7a272}">
+		<property name="assetPath">
+			<value>Grunhido2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.70662499999999995</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f6d7563-a468-4216-a4e4-02c1ae12e06d}</destination>
+		</relationship>
+	</object>
+</objects>

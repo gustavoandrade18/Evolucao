@@ -1035,11 +1035,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363749, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: thresholdDistanceX
-      value: 90
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363749, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: thresholdDistanceY
-      value: 90
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 448659370842363751, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: player

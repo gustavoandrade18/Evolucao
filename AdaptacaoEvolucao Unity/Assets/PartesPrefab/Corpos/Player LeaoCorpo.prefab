@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 695521494191319623, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5530854994684541851, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_Name
@@ -186,6 +186,14 @@ PrefabInstance:
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: exp
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: salva
+      value: 
+      objectReference: {fileID: 11400000, guid: b5a12fbee43748e4ca3207d21975d456, type: 2}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: expMax
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: expImage
@@ -227,6 +235,10 @@ PrefabInstance:
       propertyPath: oxigenioImage
       value: 
       objectReference: {fileID: 4855540842997872222, guid: 9f8c40ddd0f34914e8c5884d93ea8f3f, type: 3}
+    - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: gameOverButton
+      value: 
+      objectReference: {fileID: 2409955615671987558, guid: 7b8733da7bd656b478fd9307bf128c30, type: 3}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: congelando.Path
       value: event:/Congelamento editado
@@ -369,6 +381,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0076856604, y: 0.6906702}
-  m_Size: {x: 2.2351434, y: 5.5634336}
+  m_Offset: {x: -0.0076856604, y: 1.2056047}
+  m_Size: {x: 2.2351434, y: 6.5933022}
   m_Direction: 0

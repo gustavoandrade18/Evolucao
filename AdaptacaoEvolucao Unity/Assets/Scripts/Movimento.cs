@@ -25,9 +25,9 @@ public class Movimento : MonoBehaviour
     public float oxigenioMax;
     private float oxigenio;
     public int oxigenioConsumo = 2;
-    public int oxigenioRegenera = 1;
+    public float oxigenioRegenera = 1.5f;
     private float tempo;
-    public int oxigenioPattack;
+    private float oxigenioPattack = 1f;
     bool atacado = false;
     public float visao;
     bool reproduzirAudio = true;
@@ -43,6 +43,8 @@ public class Movimento : MonoBehaviour
     public Slider expImage;
     public Slider temperatureImage;
     public TMP_Text gameOver;
+    public Button gameOverButton;
+    bool alrDead = false;
     //variaveis do void Playerstats (fome)
     public float fome;
     private float fomeTotal = 100.0f;   
@@ -71,6 +73,8 @@ public class Movimento : MonoBehaviour
     public float minDistance = 10f;
     //canvas
     public Canvas canvas;
+    //
+    [SerializeField] EvolucaoEntreCenas salva;
     //Sons
     [SerializeField] private EventReference quimio;
     private FMOD.Studio.EventInstance quimioAudio;
@@ -86,6 +90,7 @@ public class Movimento : MonoBehaviour
     private FMOD.Studio.EventInstance esquentandoAudio;
     // animacao
     [SerializeField] private Animator animator;
+    private Animator mordeu;
     //efeitos
     public GameObject fumacaPrefab;
     private GameObject fumaca;
@@ -186,14 +191,17 @@ public class Movimento : MonoBehaviour
         {
             vidaImage.value = vida/100f;
         }
-        if(vida <=0)
+        if(vida <= 0 && alrDead == false)
         {
-            Time.timeScale = 0;
             if(gameOver != null)
             {
+                Button newButton = Instantiate(gameOverButton, canvas.transform);
                 gameOver.text = "Fim de Jogo";
                 gameOver.gameObject.SetActive(true);
+                alrDead = true;
+                salva.fase -= 1;
             }
+            Time.timeScale = 0;
         }
          if (Input.GetKeyUp(KeyCode.Minus))
          {
@@ -347,17 +355,18 @@ public class Movimento : MonoBehaviour
 
     void RotateTowardsAlly()
     {
+        
         // Encontrar o objeto mais próximo com a tag "Aliado"
         GameObject closestAlly = FindClosestAlly();
 
-        if(reproduzirAudio)
-        {
-            grunhidoAudio.start();  
-            reproduzirAudio = false;
-            Debug.Log("ReproduzirAudio");
-        }
         if (closestAlly != null)
         {
+            if(reproduzirAudio)
+            {
+                grunhidoAudio.start();  
+                reproduzirAudio = false;
+                Debug.Log("ReproduzirAudio");
+            }
             // Direção do objeto atual até o objeto mais próximo
             Vector2 direction = closestAlly.transform.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -431,10 +440,15 @@ public class Movimento : MonoBehaviour
             if(bocaPlayer != null)
             {
                 onTriggerBoca = bocaPlayer.GetComponent<OnTriggerBoca>();
+                mordeu = bocaPlayer.GetComponent<Animator>();
             }
             
             if(oxigenio >= oxigenioPattack && onTriggerBoca != null)
             {
+                if(mordeu != null)
+                {
+                    mordeu.SetTrigger("Mordeu");
+                }
                 mordidaAudio.start();
                 onTriggerBoca.attack = true;
                 onTriggerBoca.boxCollider.size += new Vector2(onTriggerBoca.sizeIncrease, onTriggerBoca.sizeIncrease*2f);

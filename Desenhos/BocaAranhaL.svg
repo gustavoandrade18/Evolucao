@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="BocaAranhaL.svg"
+   inkscape:export-xdpi="150"
+   inkscape:export-ydpi="150"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true">
+    <sodipodi:guide
+       position="144.98104,190.96209"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="144.32016,107.39317"
+       orientation="0,-1"
+       id="guide2"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#3a0000;fill-opacity:1;stroke:#000000;stroke-width:0.899999;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1"
+       d="m 78.355448,182.98578 c 0,0 -15.799369,-14.45793 -20.175354,-23.92891 -2.793153,-6.04524 -4.20912,-13.11135 -3.284361,-19.70616 1.466923,-10.46118 5.301871,-22.09253 13.606636,-28.62086 6.028605,-4.73906 22.521327,-4.69194 22.521327,-4.69194 0,0 -9.781613,5.17681 -13.137441,9.38389 -5.8141,7.28892 -9.950104,16.51999 -10.791468,25.80569 -0.462301,5.10218 1.059344,10.39953 3.28436,15.01421 3.766045,7.81077 15.841201,20.50713 15.841201,20.50713 l 5.50714,6.70615 -7.507109,5.63033 z"
+       id="path1"
+       sodipodi:nodetypes="cssscssscccc" />
+  </g>
+</svg>

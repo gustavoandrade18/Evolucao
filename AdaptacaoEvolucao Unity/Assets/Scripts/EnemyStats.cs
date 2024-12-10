@@ -95,7 +95,7 @@ public class EnemyStats : MonoBehaviour
         {
             if(tempo>=1 && oxigenio < oxigenioMax)
             {
-                oxigenio += 1;
+                oxigenio += 0.6f;
                 tempo=0;
             }
             Wander();

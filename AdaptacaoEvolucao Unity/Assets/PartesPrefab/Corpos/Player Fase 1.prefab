@@ -110,7 +110,6 @@ MonoBehaviour:
   oxigenioMax: 0
   oxigenioConsumo: 2
   oxigenioRegenera: 2
-  oxigenioPattack: 2
   visao: 0
   vidaTotal: 100
   vida: 0
@@ -122,6 +121,7 @@ MonoBehaviour:
   expImage: {fileID: 3459812609093481301, guid: 728f7c02ad4fc1249a0d3e2fb109d181, type: 3}
   temperatureImage: {fileID: 3666032111190032418, guid: 5f3839588e246c24496f3c58d09695d2, type: 3}
   gameOver: {fileID: 5871004678103741047, guid: a90a6d1e79eca8f4fb50797392db6ff0, type: 3}
+  gameOverButton: {fileID: 0}
   fome: 0
   fomeConsumo: 0
   fomeConsumoI: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
   onTriggerBoca: {fileID: 0}
   dano: 0
   exp: 0
-  expMax: 180
+  expMax: 120
   expPassiveGain: 1
   fase:
   - Filhote
@@ -143,6 +143,7 @@ MonoBehaviour:
   reproduzir: 0
   minDistance: 10
   canvas: {fileID: 0}
+  salva: {fileID: 0}
   quimio:
     Guid:
       Data1: 1609464254
@@ -229,7 +230,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

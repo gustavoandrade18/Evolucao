@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638690690026910630
+  lastModified: 638691923646504133
   FileSizes:
   - Name: Desktop
     Value: 1216
@@ -154,7 +154,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1360
+  Length: 1800
 --- !u!114 &-340324753341540084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   - {fileID: 3180362696733554211}
   StringsBanks:
   - {fileID: -7849670829442329960}
-  cacheTime: 638690690026910630
+  cacheTime: 638691923646504133
   cacheVersion: 131619
 --- !u!114 &959478739296798139
 MonoBehaviour:
@@ -284,10 +284,10 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638690690026910630
+  lastModified: 638691923646479036
   FileSizes:
   - Name: Desktop
-    Value: 1392000
+    Value: 1403680
   Exists: 1
 --- !u!114 &3715711282066255958
 MonoBehaviour:

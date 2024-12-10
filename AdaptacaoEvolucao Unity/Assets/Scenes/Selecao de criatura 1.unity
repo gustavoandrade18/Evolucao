@@ -3643,6 +3643,7 @@ MonoBehaviour:
   - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
   prefabsBoca:
   - {fileID: 5126606884050977878, guid: c5145c9ecb294b741b8607deff92dd48, type: 3}
+  - {fileID: 3935436590981040464, guid: dda79f8c7bf58c949a55bd356d0ee84e, type: 3}
   prefabsOlhos:
   - {fileID: 745039988511243743, guid: 756720d20b7171e4ab709e67278ada3c, type: 3}
   prefabsGuelras:
@@ -4806,7 +4807,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

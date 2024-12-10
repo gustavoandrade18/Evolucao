@@ -64,7 +64,7 @@ public class NpcSpawn : MonoBehaviour
         if(inimigoHerbivoro < 2)
         {
             tempoSpawnHerbivoro += Time.deltaTime;
-            if(tempoSpawnHerbivoro>cooldownSpawn)
+            if(tempoSpawnHerbivoro>cooldownSpawn/2f)
             {
                 carnivoro = false;
                 SpawnInimigo(); 

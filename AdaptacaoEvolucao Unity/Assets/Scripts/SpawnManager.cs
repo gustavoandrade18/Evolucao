@@ -18,6 +18,7 @@ public class SpawnManager : MonoBehaviour
     public float geloCooldown;
     public float geloDesdeUltimoSpawn;
     public bool foodDestroyed;
+    public float cooldown;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class SpawnManager : MonoBehaviour
 
     void Update()
     {
+        cooldown += Time.deltaTime;
         if(pontoCentro == null)
         {
             pontoCentro = GameObject.FindGameObjectWithTag("Player").transform;
@@ -76,6 +78,10 @@ public class SpawnManager : MonoBehaviour
 
         // Calcula a posição final de spawn
         Vector2 spawnPosition = pontoCentro ? (Vector2)pontoCentro.position + randomOffset : (Vector2)transform.position + randomOffset;
+        if (spawnPosition.x - pontoCentro.position.x > 20f && spawnPosition.y - pontoCentro.position.y < 30f)
+        {
+            spawnPosition = pontoCentro ? (Vector2)pontoCentro.position + randomOffset : (Vector2)transform.position + randomOffset;
+        }
 
         // Instancia o prefab no ponto de spawn
         Instantiate(prefab, spawnPosition, Quaternion.identity);

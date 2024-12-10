@@ -100,6 +100,6 @@ MonoBehaviour:
   speed: 0
   oxigenioMax: 0
   tempo: 0
-  visao: 9
+  visao: 11
   oxigenioInimigo: 0
   enemyDetection: 13

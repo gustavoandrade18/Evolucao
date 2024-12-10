@@ -80,7 +80,7 @@ public class GeraCaracteristicas : MonoBehaviour
             // Substitui as guelras
             ReplaceChild(childGuelras, prefabGuelras, player);
 
-            movimento.fomeConsumoI += (float)salva.olhos / 2 + (float)salva.rabo / 2 + (float)salva.boca / 2;
+            movimento.fomeConsumoI += (float)salva.olhos / 4 + (float)salva.rabo / 4 + (float)salva.boca / 4;
         }
 
     }
@@ -110,7 +110,7 @@ public class GeraCaracteristicas : MonoBehaviour
             // Substitui as guelras
             ReplaceChild(childGuelras, prefabGuelras, aliado);
             
-            if(allyQuantity >=2)
+            if(allyQuantity >=1)
             {
                 npcSpawn.allySpawned = false;
             }

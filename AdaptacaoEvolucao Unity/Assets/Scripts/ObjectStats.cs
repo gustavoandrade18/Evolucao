@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ObjectStats : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -51,8 +51,13 @@ public class ObjectStats : MonoBehaviour
             }
             if (CompareTag("Olho") && parentScript != null)
             {
-                SetVision(parentScript);
-                Destroy(this);
+                string currentSceneName = SceneManager.GetActiveScene().name;
+
+                if (currentSceneName != "Selecao de criatura 1")
+                {
+                    SetVision(parentScript);
+                    Destroy(this);
+                }
             }
         }
     }

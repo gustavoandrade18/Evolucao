@@ -105,11 +105,21 @@ MonoBehaviour:
   boxCollider: {fileID: 0}
   boxColliderI: {x: 0, y: 0}
   carnivoro: 1
+  enemyStats: {fileID: 0}
   dano: 25
   cooldown: 0
   fugidinha: 0
   fugidinhaCooldown: 0
   player: {fileID: 5001095984396461158, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+  quebraGelo: 0
+  recebeMais: 0
+  mordida:
+    Guid:
+      Data1: 1096152304
+      Data2: 1165841231
+      Data3: -578770008
+      Data4: 170630635
+    Path: event:/Mordida editada
 --- !u!61 &-6307717375933413330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,7 +133,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008600354, y: -0.14620586}
+  m_Offset: {x: -0.03408408, y: 0.15293837}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,5 +144,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32708156, y: 0.30644056}
+  m_Size: {x: 1.8237143, y: 0.904729}
   m_EdgeRadius: 0

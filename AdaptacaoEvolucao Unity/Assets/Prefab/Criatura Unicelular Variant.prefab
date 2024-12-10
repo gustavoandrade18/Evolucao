@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 867415660813193513, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5291408229548441845, guid: 6646c56d3084aca4cb2a88a784d39ece, type: 3}
       propertyPath: m_Name
       value: Criatura Unicelular Variant

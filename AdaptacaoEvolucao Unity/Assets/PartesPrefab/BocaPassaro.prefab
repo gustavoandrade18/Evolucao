@@ -107,12 +107,19 @@ MonoBehaviour:
   carnivoro: 0
   enemyStats: {fileID: 0}
   dano: 4
-  cooldown: 0
   fugidinha: 0
   fugidinhaCooldown: 0
   player: {fileID: 0}
   quebraGelo: 1
   recebeMais: 0
+  mordida:
+    Guid:
+      Data1: 1096152304
+      Data2: 1165841231
+      Data3: -578770008
+      Data4: 170630635
+    Path: event:/Mordida editada
+  mordeu: {fileID: 0}
 --- !u!61 &4446853732781741909
 BoxCollider2D:
   m_ObjectHideFlags: 0
