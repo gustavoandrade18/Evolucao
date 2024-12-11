@@ -20,11 +20,11 @@ public class TemperatureZone : MonoBehaviour
             //maior que 35 começa a perder vida
             //menor que 10 fome aumentada
             //menos que 0 coemça a perder vida
-            if(temperaturaLocal-movimento.heatResistance > movimento.temperatura && tempo >= 2)
+            if(temperaturaLocal > movimento.temperatura && temperaturaLocal < movimento.heatResistance && tempo >= 2)
             {
                 movimento.temperatura += 2;
             }
-            if(temperaturaLocal + movimento.coldResistance < movimento.temperatura && tempo >= 2)
+            if(temperaturaLocal < movimento.temperatura && temperaturaLocal > movimento.coldResistance && tempo >= 2)
             {
                 movimento.temperatura -= 2;
             }

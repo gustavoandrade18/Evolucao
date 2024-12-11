@@ -58,6 +58,7 @@ public class Movimento : MonoBehaviour
     public OnTriggerBoca onTriggerBoca;
     public float dano;
     private GameObject bocaPlayer; 
+    bool fomeCarnivoro;
     //varivaveis de experiencia
     public float exp;
     public float expMax;
@@ -95,6 +96,8 @@ public class Movimento : MonoBehaviour
     public GameObject fumacaPrefab;
     private GameObject fumaca;
     bool temperaturaAudio = false;
+    //
+
 
     void Start()
     {
@@ -460,6 +463,12 @@ public class Movimento : MonoBehaviour
                 animator.SetBool("Quimio", true);
             }
             atacado = true;
+            if (fomeCarnivoro == false && onTriggerBoca.carnivoro)
+            {
+                fomeConsumoI -= 0.5f;
+                fomeConsumo = fomeConsumoI;
+                fomeCarnivoro = true;
+            }
         }
     }
     public void OnAttackRelease (InputValue value)

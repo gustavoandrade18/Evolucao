@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2965523632845655603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: -0.04, y: -2.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4233047600863263391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.03, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8563045337042331554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.01, z: 0}
+  m_LocalPosition: {x: 0.06, y: 2.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117,8 +117,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9209717170952119132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.58, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.05, y: 1.92, z: 0}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2058387505026686495}
@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.02465
+      value: -65.51
       objectReference: {fileID: 0}
     - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.718931
+      value: -11.18
       objectReference: {fileID: 0}
     - target: {fileID: 429661896106861330, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_LocalPosition.z
@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5530854994684541851, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_Name
-      value: Player LeaoCorpo
+      value: Player LulaCorpo
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: exp
@@ -237,7 +237,7 @@ PrefabInstance:
       objectReference: {fileID: 4855540842997872222, guid: 9f8c40ddd0f34914e8c5884d93ea8f3f, type: 3}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: coldResistance
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6389754128445987884, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: gameOverButton
@@ -360,9 +360,17 @@ PrefabInstance:
       value: 1277601444
       objectReference: {fileID: 0}
     - target: {fileID: 9132696994438665654, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: m_Size.x
+      value: 3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132696994438665654, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
+      propertyPath: m_Size.y
+      value: 4.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 9132696994438665654, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8640296ed250d264b9468153e8ef1ee6, type: 3}
+      objectReference: {fileID: 21300000, guid: 5381c7cafbfa55344828a943da97ab11, type: 3}
     m_RemovedComponents:
     - {fileID: 842284953512237607, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
@@ -389,6 +397,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0076856604, y: 1.2056047}
-  m_Size: {x: 2.2351434, y: 6.5933022}
+  m_Offset: {x: -0.050067894, y: 0.7461092}
+  m_Size: {x: 2.3050306, y: 7.1295123}
   m_Direction: 0

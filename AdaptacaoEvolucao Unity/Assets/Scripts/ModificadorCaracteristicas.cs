@@ -30,12 +30,13 @@ public int[] corpoNumero = new int [3];
 public string[] tags; // Array para armazenar as tags correspondentes
 
 public Vector3[] posicoes; // Array para armazenar as posições correspondentes
+int i = 0;
 
     void Start()
     {
-        CriaCorpo();
         while(criaturaNumber <= 2)
         {
+            CriaCorpo();
         // Seleciona um prefab aleatório para o rabo
         int randomIndex = Random.Range(0, prefabsRabo.Length);
         raboNumero[criaturaNumber] = randomIndex;
@@ -60,6 +61,7 @@ public Vector3[] posicoes; // Array para armazenar as posições correspondentes
 
         if (criatura[criaturaNumber] != null)
         {
+            
             // Encontra o Transform dos objetos filhos
             Transform childRabo = criatura[criaturaNumber].transform.Find(childRaboNome);
             Transform childBoca = criatura[criaturaNumber].transform.Find(childBocaNome);
@@ -110,9 +112,7 @@ public Vector3[] posicoes; // Array para armazenar as posições correspondentes
     }
     void CriaCorpo()
     {
-        int indiceAleatorio = Random.Range(0, prefabsCorpo.Length);
-        for (int i = 0; i < 3; i++)
-        {
+            int indiceAleatorio = Random.Range(0, prefabsCorpo.Length);
             corpoNumero[i] = indiceAleatorio;
             // Verifica se o nome do prefab começa com "Corpo"
             if (prefabsCorpo[indiceAleatorio] != null)
@@ -121,6 +121,6 @@ public Vector3[] posicoes; // Array para armazenar as posições correspondentes
                 GameObject instancia = Instantiate(prefabsCorpo[indiceAleatorio], posicoes[i], Quaternion.identity);
                 instancia.tag = tags[i];
             }
-        }
+            i++;
     }
 }

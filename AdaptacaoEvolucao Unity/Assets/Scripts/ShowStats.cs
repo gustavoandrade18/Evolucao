@@ -39,12 +39,12 @@ public class ShowStats : MonoBehaviour
             alreadyExecuted = true;
         }
             
-
+        float calor = (movimento.heatResistance - 36f);
         caracteristicas[0].text = "Visão:\n" + movimento.visao;
         caracteristicas[1].text = "Dano:\n" + bocaScript.dano;
         caracteristicas[2].text = "Velocidade:\n" + movimento.speed;
         caracteristicas[3].text = "Tolerancia frio:\n" + movimento.coldResistance;
-        caracteristicas[4].text = "Tolerancia calor:\n" + movimento.heatResistance;
+        caracteristicas[4].text = "Tolerancia calor:\n" + calor;
         caracteristicas[5].text = "Gasto energetico:\n" + movimento.fomeConsumoI;
     }
 

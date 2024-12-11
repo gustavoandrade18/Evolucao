@@ -60,6 +60,7 @@ MonoBehaviour:
   geloCooldown: 10
   geloDesdeUltimoSpawn: 0
   foodDestroyed: 0
+  cooldown: 0
 --- !u!114 &448659370842363745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,6 +80,7 @@ MonoBehaviour:
   childGuelrasNome: Guelras
   prefabsModelo:
   - {fileID: 6171937961376106134, guid: b47607912e303e543a6327d41b15ae20, type: 3}
+  - {fileID: 6171937961376106134, guid: 45e4a6bc9a27f67478388d82d2654f92, type: 3}
   prefabsRabo:
   - {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
   - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
@@ -91,6 +93,7 @@ MonoBehaviour:
   - {fileID: 8851411522347403986, guid: 6ab209c88dbaecb45b28ef7451194e58, type: 3}
   prefabsModeloAlly:
   - {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
+  - {fileID: 5151545293449071401, guid: cbbcdd70590b80e4fafa844b77369c9e, type: 3}
   allyQuantity: 0
 --- !u!114 &448659370842363751
 MonoBehaviour:
@@ -144,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thresholdPosition: {x: 0, y: 0}
-  thresholdDistanceX: 225
-  thresholdDistanceY: 225
+  thresholdDistanceX: 220
+  thresholdDistanceY: 224
   randomOffsetRangeX: 60
   randomOffsetRangeY: 30
   player: {fileID: 0}
