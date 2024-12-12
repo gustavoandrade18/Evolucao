@@ -229,7 +229,7 @@ public class Movimento : MonoBehaviour
             if(temperatura > 0 && temperatura < 35)
             {
                 fome -= 0.6f;
-                vida += 1;
+                vida += 2;
             }
         }
           
@@ -463,11 +463,14 @@ public class Movimento : MonoBehaviour
                 animator.SetBool("Quimio", true);
             }
             atacado = true;
-            if (fomeCarnivoro == false && onTriggerBoca.carnivoro)
+            if (onTriggerBoca != null)
             {
-                fomeConsumoI -= 0.5f;
-                fomeConsumo = fomeConsumoI;
-                fomeCarnivoro = true;
+                if (fomeCarnivoro == false && onTriggerBoca.carnivoro)
+                {
+                    fomeConsumoI -= 0.5f;
+                    fomeConsumo = fomeConsumoI;
+                    fomeCarnivoro = true;
+                }
             }
         }
     }

@@ -93,7 +93,7 @@ MonoBehaviour:
   carnivoro: 0
   player: {fileID: 5530854994684541851, guid: d723996256bf7bf4c91ccb06e9d42e41, type: 3}
   playerDistance: {x: 0, y: 0}
-  maxDistance: 25
+  maxDistance: 50
   speed: 10
   detectionRange: 1
   velocidadeRotacao: 5
