@@ -126,7 +126,7 @@ public class EnemyStats : MonoBehaviour
 
         if (other.CompareTag("BocaPlayer"))
         {
-            if(onTriggerBoca.attack == true && invencibilidade>=2)
+            if(onTriggerBoca.attack == true && invencibilidade>=1)
             {
                 vida -= onTriggerBoca.dano;
                 invencibilidade=0;

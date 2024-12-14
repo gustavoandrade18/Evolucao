@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 448659370842363751}
   - component: {fileID: 448659370842363749}
   - component: {fileID: -1568892382760378229}
+  - component: {fileID: 4861635743241708785}
+  - component: {fileID: 209456307778770943}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -51,7 +53,7 @@ MonoBehaviour:
   objetoPrefab: {fileID: 8361804821120802354, guid: de2e9c7511db9a4479c4dc8d5ef49f28, type: 3}
   gelo: {fileID: 2166866741857577923, guid: 396fd5628fa460d4d9c6d78b55babcf7, type: 3}
   intervaloSpawn: 5
-  raioSpawn: 60
+  raioSpawn: 90
   pontoCentro: {fileID: 0}
   foodOnScreen: 0
   foodLimit: 5
@@ -94,7 +96,7 @@ MonoBehaviour:
   prefabsModeloAlly:
   - {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
   - {fileID: 5151545293449071401, guid: cbbcdd70590b80e4fafa844b77369c9e, type: 3}
-  allyQuantity: 0
+  allyQuantity: 1
 --- !u!114 &448659370842363751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +116,7 @@ MonoBehaviour:
   tempoSpawnHerbivoro: 0
   prefabsInimigos:
   - {fileID: 873619295286133100, guid: 2e732e3394c917747b2f640f0d782f28, type: 3}
+  - {fileID: 5151545293449071401, guid: cbbcdd70590b80e4fafa844b77369c9e, type: 3}
   prefabsRabo:
   - {fileID: 973948840533287100, guid: 97f8764271a9ec8468916209bc91d5e4, type: 3}
   - {fileID: 1708773772949853329, guid: 8e1acdc8c9a50b94192b4cbf5b8bb29f, type: 3}
@@ -164,3 +167,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 445ca474b70346c479042e035b732e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4861635743241708785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e831c05a7415c684d9ee58cb7e7910ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1422970051281087762, guid: 7cc5c303ca6641d4c8cb4a7ba7d198b0, type: 3}
+  canvas: {fileID: 0}
+  salva: {fileID: 11400000, guid: b5a12fbee43748e4ca3207d21975d456, type: 2}
+--- !u!114 &209456307778770943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448659370775863318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: e478acd8ec89b464494d42a7dc3b826f, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a058bee022fb5ac4fbeebf52ce4697f4, type: 3}
   m_Name: SalvaCaracteristicas
   m_EditorClassIdentifier: 
-  rabo: 0
-  boca: 2
+  rabo: 1
+  boca: 0
   olhos: 0
   guelras: 0
+  corpo: 0
+  fase: 3

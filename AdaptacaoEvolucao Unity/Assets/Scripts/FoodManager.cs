@@ -25,7 +25,7 @@ public class FoodManager : MonoBehaviour
             spawnManager.foodOnScreen -= 1;
         }
     
-        if (Mathf.Abs(transform.position.x - spawnManager.pontoCentro.position.x) >= 60f || Mathf.Abs(transform.position.y - spawnManager.pontoCentro.position.y) >= 60f)
+        if (Mathf.Abs(transform.position.x - spawnManager.pontoCentro.position.x) >= spawnManager.raioSpawn || Mathf.Abs(transform.position.y - spawnManager.pontoCentro.position.y) >= spawnManager.raioSpawn)
         {
             spawnManager.foodDestroyed = true;
             spawnManager.foodOnScreen -= 1;

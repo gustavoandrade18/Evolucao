@@ -1693,15 +1693,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: foodLimit
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: geloLimit
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: raioSpawn
-      value: 60
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: geloCooldown
@@ -1709,7 +1709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: intervaloSpawn
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 448659370775863317, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: m_RootOrder

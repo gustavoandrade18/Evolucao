@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 448659370775863316, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: intervaloSpawn
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 448659370775863317, guid: 467f6a2e264c51a4389a703ddcd8ff92, type: 3}
       propertyPath: m_RootOrder

@@ -4,13 +4,16 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
 using FMODUnity;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
     public GameObject tutorialPanel;
     public TMP_Text tutorialText;
     public int textoQuantidade;
-    float tempo;
+    float tempo=0f;
+    GameObject player;
+    Movimento movimento;
     //
     [SerializeField] EvolucaoEntreCenas salva;
     //
@@ -29,12 +32,21 @@ public class Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        tempo += Time.deltaTime;
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                movimento = player.GetComponent<Movimento>();
+            }
+        }
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        tempo += Time.unscaledDeltaTime;
         if(salva.fase == 1)
         {
             TutorialFase1();
         }
-        else if (salva.fase == 2)
+        else if (salva.fase == 2 && currentSceneName != "Selecao de criatura 1")
         {
             TutorialFase2();
         }
@@ -48,15 +60,15 @@ public class Tutorial : MonoBehaviour
         }
         else if(textoQuantidade == 1)
         {
-            tutorialText.text = "Cada criatura tem diferentes caracteristicas que são obtidas aleatoriamente";
+            tutorialText.text = "Cada criatura tem diferentes características que são obtidas aleatoriamente";
         }
         else if(textoQuantidade == 2)
         {
-            tutorialText.text = "(clique em cima de uma das criaturas para ver suas caracteristicas)";
+            tutorialText.text = "(clique em cima de uma das criaturas para ver suas características)";
         }
         else if(textoQuantidade == 3)
         {
-            tutorialText.text = "Nenhuma criatura é superior a outra, cada uma tem caracteristicas unicas que a diferem das outras";
+            tutorialText.text = "Nenhuma criatura é superior a outra, cada uma tem características únicas que a diferem das outras";
         }
         else if(textoQuantidade == 4)
         {
@@ -70,22 +82,27 @@ public class Tutorial : MonoBehaviour
 
     public void TutorialFase2()
     {
-        if(textoQuantidade == 0)
+        if(movimento.level>=1 && textoQuantidade < 7)
+        {
+            textoQuantidade = 7;
+        }
+        if(textoQuantidade == 0 && tempo >= 5f)
         {
             tutorialPanel.SetActive(true);
             tutorialText.text = "Bem vindo a fase 2!";
+            Time.timeScale=0;
         }
         else if(textoQuantidade == 1)
         {
-            tutorialText.text = "Agora que sua criatura evoluiu, ela esta mais complexa, como você pode ver novas huds foram adicionados a sua tela";
+            tutorialText.text = "Agora que sua criatura evoluiu, ela está mais complexa, agora outros huds ganharam importância na sua tela";
         }
         else if(textoQuantidade == 2)
         {
-            tutorialText.text = "A barra de azul é a barra de oxigenio, para correr e morder você gasta oxigenio \n (Aperte shit para começar e parar de correr) \n (Aperte espaço para morder)";
+            tutorialText.text = "A barra de azul é a barra de oxigênio, para correr e morder você gasta oxigênio \n (Aperte shift para começar e parar de correr) \n (Aperte espaço para morder)";
         }
         else if(textoQuantidade == 3)
         {
-            tutorialText.text = "Administre bem seu oxigenio, pois você precisara dele para fugir e perseguir outras criaturas";
+            tutorialText.text = "Administre bem seu oxigênio, pois você precisará dele para fugir e perseguir outras criaturas";
         }
         else if(textoQuantidade == 4)
         {
@@ -93,11 +110,27 @@ public class Tutorial : MonoBehaviour
         }
         else if(textoQuantidade == 5)
         {
-            tutorialText.text = "Caso a temperatura chege no minimo ou no maximo, você recebera dano até morrer ou ajustar sua temperatura";
+            tutorialText.text = "Caso a temperatura chegue no mínimo ou no máximo, você receberá dano até morrer ou ajustar sua temperatura";
         }
         else if(textoQuantidade == 6)
         {
             tutorialPanel.SetActive(false);
+            Time.timeScale=1;
+        }
+        else if(textoQuantidade == 7)
+        {
+            tutorialPanel.SetActive(true);
+            Time.timeScale=0;
+            tutorialText.text = "Agora que você cresceu, para progredir você precisa se reproduzir";
+        }
+        else if(textoQuantidade == 8)
+        {
+            tutorialText.text = "Para se reproduzir, chegue perto de um aliado e segure E";
+        }
+        else if(textoQuantidade == 9)
+        {
+           tutorialPanel.SetActive(false);
+           Time.timeScale=1;
         }
     }
 

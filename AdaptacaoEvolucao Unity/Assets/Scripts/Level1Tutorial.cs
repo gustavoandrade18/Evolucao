@@ -69,25 +69,26 @@ public class Level1Tutorial : MonoBehaviour
     {
         if(textoQuantidade != 7)
         {
-            tempo += Time.deltaTime;
+            tempo += Time.unscaledDeltaTime;
         }
         if(tempo >= 1.5f)
         {
 
             if(textoQuantidade==0)
             {
+                Time.timeScale =0;
                 menuPanel.SetActive(true);
-                tutorialText.text = "Bem vindo a Adaptação à Evolução, este é o tutorial e que vai te ensinar o basico sobre o jogo.";
-                movimento.enabled = false;
+                tutorialText.text = "Bem vindo a Adaptação à Evolução, este é o tutorial que vai te ensinar o básico sobre o jogo.";
             }
             if(textoQuantidade==1)
             {
-                tutorialText.text = "Para se locomover, use WASD, ou o joystick direcional caso esteja em um dispositivo movel.";
-                movimento.enabled = true;
+                Time.timeScale =1;
+                tutorialText.text = "Para se locomover, use WASD, ou o joystick direcional caso esteja em um dispositivo móvel.";
             }
             if(textoQuantidade == 2)
             {
-                tutorialText.text = "Sua criatura ainda é muito simples, então a forma no qual ela se alimenta é simples, quimiossintese é o nome desse processo de alimentação.";
+                Time.timeScale =0;
+                tutorialText.text = "Sua criatura ainda é muito simples, então a forma no qual ela se alimenta é simples, quimiossíntese é o nome desse processo de alimentação.";
             }
             if(textoQuantidade == 3)
             {
@@ -95,37 +96,45 @@ public class Level1Tutorial : MonoBehaviour
             }
             if(textoQuantidade == 4)
             {
-                tutorialText.text = "(segure espaço ou o botão de ataque para realizar a quimiosintesse)";
+                tutorialText.text = "(segure espaço ou o botão de ataque para realizar a quimiossíntese)";
             }
             if(textoQuantidade == 5)
             {
-                tutorialText.text = "Com o passar do tempo, e toda vez que você se alimenta, sua cratura ganha experiencia";
+                tutorialText.text = "Com o passar do tempo, e toda vez que você se alimenta, sua criatura ganha experiência";
             }
             if(textoQuantidade == 6)
             {
-                tutorialText.text = "Quando experiencia o suficiente for obtida, sua criatura passará para o proximo estagio da vida";
+                tutorialText.text = "Quando experiencia o suficiente for obtida, sua criatura passará para o próximo estágio da vida";
             }
             if(textoQuantidade == 7)
             {
                menuPanel.SetActive(false);
+               Time.timeScale =1;
             }
             if(textoQuantidade == 8)
             {
+                Time.timeScale =0;
                menuPanel.SetActive(true);
-               tutorialText.text = "Sua criatura cresceu, parabens!";
+               tutorialText.text = "Sua criatura cresceu, parabéns!";
             }
             if(textoQuantidade == 9)
             {
-               tutorialText.text = "Agora que sua criatura cresceu, ela pode se reproduzir, dando origem a novas criaturas que com o passar de varias gerações, terão novas caracteristicas";
+               tutorialText.text = "Agora que sua criatura cresceu, ela pode se reproduzir, dando origem a novas criaturas que com o passar de várias gerações, terão novas características";
             }
             if(textoQuantidade == 10)
             {
-               tutorialText.text = "Sua criatura se reproduz de forma assexuada, então por enquanto ela não precisa de outra criatura para se reproduzir, porem nas fases seguintes isso vai ser diferente";
+               tutorialText.text = "Sua criatura se reproduz de forma assexuada, então por enquanto ela não precisa de outra criatura para se reproduzir, porém nas fases seguintes isso vai ser diferente";
             }
             if(textoQuantidade == 11)
             {
-               tutorialText.text = "Segure = ou o botão de reprodução para se reproduzir";
+                tutorialText.text = "Segure E ou o botão de reprodução para se reproduzir";
             }
+            if(textoQuantidade == 12)
+            {
+                menuPanel.SetActive(false);
+                Time.timeScale =1;
+            }
+
             if(movimento.level>=1 && textoQuantidade <=7)
             {
                 textoQuantidade = 8;

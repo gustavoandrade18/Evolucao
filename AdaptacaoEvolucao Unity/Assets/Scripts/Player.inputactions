@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Menu",
+                    "type": "Button",
+                    "id": "de2aeb6c-a514-41db-9804-5342d9c095d4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -465,7 +474,7 @@
                 {
                     "name": "",
                     "id": "03f68ee5-6939-47cd-8149-0086a1ef18b7",
-                    "path": "<Keyboard>/equals",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -476,7 +485,7 @@
                 {
                     "name": "",
                     "id": "843c9919-6f65-4bf1-9670-3029c827bb98",
-                    "path": "<Keyboard>/equals",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -503,6 +512,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Tutorial",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cd14724-95f6-4916-a3d6-342a2f5d4552",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

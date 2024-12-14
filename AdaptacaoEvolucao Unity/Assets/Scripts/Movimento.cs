@@ -29,7 +29,7 @@ public class Movimento : MonoBehaviour
     private float tempo;
     private float oxigenioPattack = 1f;
     bool atacado = false;
-    public float visao;
+    public float visao =0f;
     bool reproduzirAudio = true;
     //variaveis do void Playerstats (vida)
     public float vidaTotal=100.0f;
@@ -192,7 +192,7 @@ public class Movimento : MonoBehaviour
         //vida
         if(vidaImage != null)
         {
-            vidaImage.value = vida/100f;
+            vidaImage.value = vida/vidaTotal;
         }
         if(vida <= 0 && alrDead == false)
         {
@@ -494,4 +494,5 @@ public class Movimento : MonoBehaviour
         reproduzir = false;
         reproduzirAudio=true;
     }
+    
 }

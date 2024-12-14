@@ -51,13 +51,10 @@ public class ObjectStats : MonoBehaviour
             }
             if (CompareTag("Olho") && parentScript != null)
             {
-                string currentSceneName = SceneManager.GetActiveScene().name;
 
-                if (currentSceneName != "Selecao de criatura 1")
-                {
-                    SetVision(parentScript);
-                    Destroy(this);
-                }
+                SetVision(parentScript);
+                Destroy(this);
+                
             }
         }
     }
@@ -100,8 +97,12 @@ public class ObjectStats : MonoBehaviour
     {
         if (myScript is Movimento)
         {
-            mainCamera = Camera.main;
-            mainCamera.orthographicSize = visao;
+            string currentSceneName = SceneManager.GetActiveScene().name;
+            if (currentSceneName != "Selecao de criatura 1")
+            {
+                mainCamera = Camera.main;
+                mainCamera.orthographicSize = visao;
+            }
             Movimento movScript = (Movimento)myScript;
             movScript.visao = visao;
         }
