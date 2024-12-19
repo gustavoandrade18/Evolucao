@@ -182,6 +182,13 @@ MonoBehaviour:
   menu: {fileID: 1422970051281087762, guid: 7cc5c303ca6641d4c8cb4a7ba7d198b0, type: 3}
   canvas: {fileID: 0}
   salva: {fileID: 11400000, guid: b5a12fbee43748e4ca3207d21975d456, type: 2}
+  click:
+    Guid:
+      Data1: -808133366
+      Data2: 1180603984
+      Data3: -38398822
+      Data4: -983838833
+    Path: event:/Click editado
 --- !u!114 &209456307778770943
 MonoBehaviour:
   m_ObjectHideFlags: 0

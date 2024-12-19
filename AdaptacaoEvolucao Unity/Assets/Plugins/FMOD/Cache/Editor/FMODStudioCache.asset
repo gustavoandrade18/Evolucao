@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8040856982902421343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Cora\xE7\xE3oBatimento"
+  m_EditorClassIdentifier: 
+  Path: "event:/Cora\xE7\xE3oBatimento"
+  Guid:
+    Data1: -465889452
+    Data2: 1139748194
+    Data3: 1012098981
+    Data4: 616297521
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-7849670829442329960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638695436060835407
+  lastModified: 638701524251819377
   FileSizes:
   - Name: Desktop
-    Value: 1216
+    Value: 1330
   Exists: 1
 --- !u!114 &-7506444344197271572
 MonoBehaviour:
@@ -128,6 +155,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 270
+--- !u!114 &-2367316388679246693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/growing sound
+  m_EditorClassIdentifier: 
+  Path: event:/growing sound
+  Guid:
+    Data1: 1646299577
+    Data2: 1288440994
+    Data3: -545641812
+    Data4: -1080532950
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 809
 --- !u!114 &-422279490443928207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,12 +262,14 @@ MonoBehaviour:
   - {fileID: -422279490443928207}
   - {fileID: 3715711282066255958}
   - {fileID: -5907105360647823852}
+  - {fileID: -2367316388679246693}
+  - {fileID: -8040856982902421343}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3180362696733554211}
   StringsBanks:
   - {fileID: -7849670829442329960}
-  cacheTime: 638695436060835407
+  cacheTime: 638701524251819377
   cacheVersion: 131619
 --- !u!114 &959478739296798139
 MonoBehaviour:
@@ -284,10 +340,10 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638695436060835407
+  lastModified: 638701524251804184
   FileSizes:
   - Name: Desktop
-    Value: 1403680
+    Value: 1596384
   Exists: 1
 --- !u!114 &3715711282066255958
 MonoBehaviour:

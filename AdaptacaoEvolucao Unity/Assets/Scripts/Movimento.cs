@@ -89,6 +89,8 @@ public class Movimento : MonoBehaviour
     private FMOD.Studio.EventInstance congelandoAudio;
     [SerializeField] private EventReference esquentando;
     private FMOD.Studio.EventInstance esquentandoAudio;
+    [SerializeField] private EventReference crescendo;
+    private FMOD.Studio.EventInstance crescendoAudio;
     // animacao
     [SerializeField] private Animator animator;
     private Animator mordeu;
@@ -103,6 +105,7 @@ public class Movimento : MonoBehaviour
     {
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
 
+        crescendoAudio = RuntimeManager.CreateInstance(crescendo);
         quimioAudio = RuntimeManager.CreateInstance(quimio);
         nadoAudio = RuntimeManager.CreateInstance(nado);
         grunhidoAudio = RuntimeManager.CreateInstance(grunhido);
@@ -324,6 +327,7 @@ public class Movimento : MonoBehaviour
 
         if(exp >= expMax && level < 3)
         {
+            crescendoAudio.start();
             level++;
             exp=0;
             transform.localScale += new Vector3(0.1f,0.1f,0);
@@ -368,7 +372,6 @@ public class Movimento : MonoBehaviour
             {
                 grunhidoAudio.start();  
                 reproduzirAudio = false;
-                Debug.Log("ReproduzirAudio");
             }
             // Direção do objeto atual até o objeto mais próximo
             Vector2 direction = closestAlly.transform.position - transform.position;

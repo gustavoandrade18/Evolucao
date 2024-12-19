@@ -19,6 +19,8 @@ public class Tutorial : MonoBehaviour
     //
     [SerializeField] private EventReference click;
     private FMOD.Studio.EventInstance clickAudio;
+    //
+    bool oneTimeScale;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,12 @@ public class Tutorial : MonoBehaviour
             salva.fase = 1;
         }
         clickAudio = RuntimeManager.CreateInstance(click);
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "Fase 5")
+        {
+            salva.fase = 5;
+        }
     }
 
     // Update is called once per frame
@@ -49,6 +57,10 @@ public class Tutorial : MonoBehaviour
         else if (salva.fase == 2 && currentSceneName != "Selecao de criatura 1")
         {
             TutorialFase2();
+        }
+        else if (salva.fase == 5)
+        {
+            FimDeJogo();
         }
     }
     public void TutorialFase1()
@@ -115,12 +127,17 @@ public class Tutorial : MonoBehaviour
         else if(textoQuantidade == 6)
         {
             tutorialPanel.SetActive(false);
-            Time.timeScale=1;
+            if (oneTimeScale == false)
+            {
+                Time.timeScale=1;
+                oneTimeScale = true;
+            }
         }
         else if(textoQuantidade == 7)
         {
             tutorialPanel.SetActive(true);
             Time.timeScale=0;
+            oneTimeScale = false;
             tutorialText.text = "Agora que você cresceu, para progredir você precisa se reproduzir";
         }
         else if(textoQuantidade == 8)
@@ -130,8 +147,32 @@ public class Tutorial : MonoBehaviour
         else if(textoQuantidade == 9)
         {
            tutorialPanel.SetActive(false);
-           Time.timeScale=1;
+           if (oneTimeScale == false)
+            {
+                Time.timeScale=1;
+                oneTimeScale = true;
+            }
         }
+    }
+    public void FimDeJogo()
+    {
+        if(textoQuantidade == 0)
+        {
+            tutorialText.text = "Você terminou todas as fases de Adaptação à Evolução, Parabens!!!";
+        }
+        else if(textoQuantidade == 1)
+        {
+            tutorialText.text = "Agora você pode optar por recomeçar o jogo ou rejogar de forma aleatoria as fases anteriores";
+        }
+        else if(textoQuantidade == 2)
+        {
+            tutorialPanel.SetActive(false);
+        }
+    }
+
+    public void Sair()
+    {
+        SceneManager.LoadScene("Menu principal");
     }
 
     public void OnTutorial(InputValue value)
@@ -143,5 +184,11 @@ public class Tutorial : MonoBehaviour
                 textoQuantidade ++;
                 clickAudio.start();
             }
+    }
+    public void FaseAleatoria()
+    {
+        int randomNumber = Random.Range(2, 4);
+        Debug.Log(randomNumber);
+        SceneManager.LoadScene("Fase " + randomNumber);
     }
 }

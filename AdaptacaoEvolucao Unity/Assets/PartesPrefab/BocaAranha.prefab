@@ -237,6 +237,13 @@ MonoBehaviour:
       Data3: -578770008
       Data4: 170630635
     Path: event:/Mordida editada
+  heart:
+    Guid:
+      Data1: -465889452
+      Data2: 1139748194
+      Data3: 1012098981
+      Data4: 616297521
+    Path: "event:/Cora\xE7\xE3oBatimento"
   mordeu: {fileID: 4565618846244608051}
 --- !u!61 &-6753267065486566995
 BoxCollider2D:

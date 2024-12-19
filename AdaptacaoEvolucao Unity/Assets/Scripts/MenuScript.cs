@@ -4,19 +4,25 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class MenuScript : MonoBehaviour
 {
     public GameObject menu;
+    GameObject menuManipulavel;
     public Canvas canvas;
     [SerializeField] EvolucaoEntreCenas salva;
+    //
+    [SerializeField] private EventReference click;
+    private FMOD.Studio.EventInstance clickAudio;
     // Start is called before the first frame update
     void Start()
     {
+        clickAudio = RuntimeManager.CreateInstance(click);
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
 
-        menu = Instantiate(menu);
-        menu.transform.SetParent(canvas.transform, false);
+        menuManipulavel = Instantiate(menu);
+        menuManipulavel.transform.SetParent(canvas.transform, false);
 
     }
 
@@ -24,19 +30,16 @@ public class MenuScript : MonoBehaviour
     void Update()
     {
     }
-    public void Fechar()
-    {
-        Time.timeScale =1;
-        menu.SetActive(false);
-    }
     public void Selecao()
     {
+        clickAudio.start();
         salva.fase -= 1;
         SceneManager.LoadScene("Selecao de criatura 1");
         Time.timeScale = 1;
     }
     public void Menu()
     {
+        clickAudio.start();
         salva.fase = 0;
         SceneManager.LoadScene("Menu principal");
         Time.timeScale = 1;
@@ -44,9 +47,11 @@ public class MenuScript : MonoBehaviour
 
     public void OnMenu(InputValue value)
     {
-        menu.transform.SetAsLastSibling();
-        menu.SetActive(!menu.activeSelf);
-        if (menu.activeSelf)
+        
+        clickAudio.start();
+        menuManipulavel.transform.SetAsLastSibling();
+        menuManipulavel.SetActive(!menuManipulavel.activeSelf);
+        if (menuManipulavel.activeSelf)
         {
             Time.timeScale = 0;
         }

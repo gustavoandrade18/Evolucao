@@ -26,6 +26,8 @@ public class OnTriggerBoca : MonoBehaviour
     private bool alrAttacked = false;
     [SerializeField] private EventReference mordida;
     private FMOD.Studio.EventInstance mordidaAudio;
+    [SerializeField] private EventReference heart;
+    private FMOD.Studio.EventInstance heartAudio;
     //
     [SerializeField] private Animator mordeu;
     /*void SetPlayer(GameObject player) {
@@ -37,6 +39,7 @@ public class OnTriggerBoca : MonoBehaviour
     void Start()
     {
         mordidaAudio = RuntimeManager.CreateInstance(mordida);
+        heartAudio = RuntimeManager.CreateInstance(heart);
         if(recebeMais == true)
         {
             alimento = 35f;
@@ -169,6 +172,7 @@ public class OnTriggerBoca : MonoBehaviour
         {
             mordeu.SetTrigger("Mordeu");
             mordidaAudio.start();
+            heartAudio.start();
             boxCollider.size -= new Vector2(1f, 1f);
             spawnManager.cooldown = 0;
             fugidinha = true;

@@ -80,3 +80,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f86b72687feff4e80c0c16732e56a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialPanel: {fileID: 0}
+  tutorialText: {fileID: 0}
+  textoQuantidade: 0
+  salva: {fileID: 0}
+  click:
+    Guid:
+      Data1: -808133366
+      Data2: 1180603984
+      Data3: -38398822
+      Data4: -983838833
+    Path: event:/Click editado

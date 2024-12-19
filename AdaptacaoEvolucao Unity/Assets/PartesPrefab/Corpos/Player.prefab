@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5148158511459474947, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
       propertyPath: m_Name
-      value: Player Fase 1
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5988822360838650292, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
       propertyPath: expText
@@ -66,6 +66,26 @@ PrefabInstance:
     - target: {fileID: 5988822360838650292, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
       propertyPath: vidaText
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988822360838650292, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
+      propertyPath: crescendo.Path
+      value: event:/growing sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988822360838650292, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
+      propertyPath: crescendo.Guid.Data1
+      value: 1646299577
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988822360838650292, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
+      propertyPath: crescendo.Guid.Data2
+      value: 1288440994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988822360838650292, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
+      propertyPath: crescendo.Guid.Data3
+      value: -545641812
+      objectReference: {fileID: 0}
+    - target: {fileID: 5988822360838650292, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
+      propertyPath: crescendo.Guid.Data4
+      value: -1080532950
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30a92382c5e0fea40b13bdec3f02c640, type: 3}
