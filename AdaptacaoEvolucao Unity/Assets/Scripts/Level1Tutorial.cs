@@ -33,6 +33,17 @@ public class Level1Tutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(movimento.tutorial == true)
+        {
+             if(tempo >= 2.5f && textoQuantidade != 7) 
+            {
+                tempo = 1.5f;
+                textoQuantidade ++;
+                clickAudio.start();
+            }
+            movimento.tutorial = false;
+        }
+        //
         Tutorial();
 
         if(movimento.reproduzir == true && movimento.level >= 1 || reproducao >=2.2f) 
@@ -54,16 +65,6 @@ public class Level1Tutorial : MonoBehaviour
             reproducao = 0f;
             animator.SetBool("Reproduzir", false);
         }
-    }
-     public void OnTutorial (InputValue value)
-    {
-       
-            if(tempo >= 2.5f && textoQuantidade != 7) 
-            {
-                tempo = 1.5f;
-                textoQuantidade ++;
-                clickAudio.start();
-            }
     }
     public void Tutorial()
     {

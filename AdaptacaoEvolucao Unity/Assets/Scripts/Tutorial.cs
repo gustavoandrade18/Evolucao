@@ -158,11 +158,11 @@ public class Tutorial : MonoBehaviour
     {
         if(textoQuantidade == 0)
         {
-            tutorialText.text = "Você terminou todas as fases de Adaptação à Evolução, Parabens!!!";
+            tutorialText.text = "Você terminou todas as fases de Adaptação à Evolução, Parabéns!!!";
         }
         else if(textoQuantidade == 1)
         {
-            tutorialText.text = "Agora você pode optar por recomeçar o jogo ou rejogar de forma aleatoria as fases anteriores";
+            tutorialText.text = "Agora você pode optar por recomeçar o jogo ou rejogar de forma aleatória as fases anteriores";
         }
         else if(textoQuantidade == 2)
         {

@@ -99,7 +99,8 @@ public class Movimento : MonoBehaviour
     private GameObject fumaca;
     bool temperaturaAudio = false;
     //
-
+    public bool menuOn;
+    public bool tutorial;
 
     void Start()
     {
@@ -330,11 +331,11 @@ public class Movimento : MonoBehaviour
             crescendoAudio.start();
             level++;
             exp=0;
-            transform.localScale += new Vector3(0.1f,0.1f,0);
-            capsuleCollider.size += new Vector2(0.1f,0.1f);
+            transform.localScale += new Vector3(0.2f,0.2f,0);
+            capsuleCollider.size += new Vector2(0.2f,0.2f);
             if(onTriggerBoca != null)
             {
-                onTriggerBoca.sizeIncrease += 0.1f;
+                onTriggerBoca.sizeIncrease += 0.2f;
             }
             
             vidaTotal += vidaAcressimo;
@@ -413,6 +414,7 @@ public class Movimento : MonoBehaviour
     public void OnMove(InputValue value)
     {
         move = value.Get<Vector2>();   
+        Debug.Log("moveu");
     }
     public void OnSprint(InputValue value)
     {
@@ -440,6 +442,7 @@ public class Movimento : MonoBehaviour
     }
     public void OnAttackPress (InputValue value)
     {
+        Debug.Log("ataque");
         if(atacado == false)
         {
             bocaPlayer = GameObject.FindGameObjectWithTag("BocaPlayer");
@@ -462,6 +465,7 @@ public class Movimento : MonoBehaviour
             }
             if(onTriggerBoca == null)
             {
+                Debug.Log("quimio");
                 quimiosintesse = true;
                 animator.SetBool("Quimio", true);
             }
@@ -497,5 +501,12 @@ public class Movimento : MonoBehaviour
         reproduzir = false;
         reproduzirAudio=true;
     }
-    
+    public void OnMenu()
+    {
+        menuOn = !menuOn;
+    }
+     public void OnTutorial (InputValue value)
+    {
+       tutorial = true;    
+    }
 }

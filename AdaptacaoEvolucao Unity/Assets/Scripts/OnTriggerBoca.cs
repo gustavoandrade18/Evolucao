@@ -26,6 +26,8 @@ public class OnTriggerBoca : MonoBehaviour
     private bool alrAttacked = false;
     [SerializeField] private EventReference mordida;
     private FMOD.Studio.EventInstance mordidaAudio;
+    [SerializeField] private EventReference mordidaInimigo;
+    private FMOD.Studio.EventInstance mordidaInimigoAudio;
     [SerializeField] private EventReference heart;
     private FMOD.Studio.EventInstance heartAudio;
     //
@@ -170,8 +172,9 @@ public class OnTriggerBoca : MonoBehaviour
 
         if (other.CompareTag("Player") && transform.parent.CompareTag("Inimigo") && spawnManager.cooldown > 2.0f)
         {
+            mordidaInimigoAudio = RuntimeManager.CreateInstance(mordidaInimigo);
             mordeu.SetTrigger("Mordeu");
-            mordidaAudio.start();
+            mordidaInimigoAudio.start();
             heartAudio.start();
             boxCollider.size -= new Vector2(1f, 1f);
             spawnManager.cooldown = 0;

@@ -15,6 +15,8 @@ public class MenuScript : MonoBehaviour
     //
     [SerializeField] private EventReference click;
     private FMOD.Studio.EventInstance clickAudio;
+    Movimento movimento;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,29 @@ public class MenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                movimento = player.GetComponent<Movimento>();
+            }
+        }
+        if(movimento.menuOn == true)
+        {
+            clickAudio.start();
+            menuManipulavel.transform.SetAsLastSibling();
+            menuManipulavel.SetActive(!menuManipulavel.activeSelf);
+            if (menuManipulavel.activeSelf)
+            {
+            Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+            movimento.menuOn = false;
+        }
     }
     public void Selecao()
     {
@@ -45,19 +70,4 @@ public class MenuScript : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void OnMenu(InputValue value)
-    {
-        
-        clickAudio.start();
-        menuManipulavel.transform.SetAsLastSibling();
-        menuManipulavel.SetActive(!menuManipulavel.activeSelf);
-        if (menuManipulavel.activeSelf)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
-    }
 }

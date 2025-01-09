@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638701524251819377
+  lastModified: 638718587384144217
   FileSizes:
   - Name: Desktop
-    Value: 1330
+    Value: 1390
   Exists: 1
 --- !u!114 &-7506444344197271572
 MonoBehaviour:
@@ -264,12 +264,13 @@ MonoBehaviour:
   - {fileID: -5907105360647823852}
   - {fileID: -2367316388679246693}
   - {fileID: -8040856982902421343}
+  - {fileID: 6823190175173967342}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3180362696733554211}
   StringsBanks:
   - {fileID: -7849670829442329960}
-  cacheTime: 638701524251819377
+  cacheTime: 638718587384144217
   cacheVersion: 131619
 --- !u!114 &959478739296798139
 MonoBehaviour:
@@ -340,10 +341,10 @@ MonoBehaviour:
   Path: ../SonsEvolucao/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638701524251804184
+  lastModified: 638718587384133415
   FileSizes:
   - Name: Desktop
-    Value: 1596384
+    Value: 1619168
   Exists: 1
 --- !u!114 &3715711282066255958
 MonoBehaviour:
@@ -399,3 +400,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 106
+--- !u!114 &6823190175173967342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hfx - Morida Inimigo
+  m_EditorClassIdentifier: 
+  Path: event:/Hfx - Morida Inimigo
+  Guid:
+    Data1: -759769093
+    Data2: 1314566591
+    Data3: -1314451053
+    Data4: 698729085
+  Banks:
+  - {fileID: 3180362696733554211}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 850

@@ -237,6 +237,13 @@ MonoBehaviour:
       Data3: -578770008
       Data4: 170630635
     Path: event:/Mordida editada
+  mordidaInimigo:
+    Guid:
+      Data1: -759769093
+      Data2: 1314566591
+      Data3: -1314451053
+      Data4: 698729085
+    Path: event:/Hfx - Morida Inimigo
   heart:
     Guid:
       Data1: -465889452
