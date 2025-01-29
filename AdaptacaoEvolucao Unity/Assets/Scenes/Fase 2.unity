@@ -449,6 +449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interagir
       objectReference: {fileID: 0}
+    - target: {fileID: 1522884755274363262, guid: 02f21a3b3fac94242b343ffa8ec8f58d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02f21a3b3fac94242b343ffa8ec8f58d, type: 3}
 --- !u!224 &474395487 stripped
@@ -551,6 +555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprint
       objectReference: {fileID: 0}
+    - target: {fileID: 714648718314418302, guid: 9d4f385bab63a83489a6dcb1c41679d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d4f385bab63a83489a6dcb1c41679d8, type: 3}
 --- !u!224 &527239771 stripped
@@ -652,6 +660,10 @@ PrefabInstance:
     - target: {fileID: 3355983171275259821, guid: 40417a904e596274e852f0c81d7cb535, type: 3}
       propertyPath: m_Name
       value: Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355983171275259821, guid: 40417a904e596274e852f0c81d7cb535, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40417a904e596274e852f0c81d7cb535, type: 3}
@@ -996,6 +1008,10 @@ PrefabInstance:
     - target: {fileID: 5328870854030324990, guid: 14a229b2e4680094bba03ec0510aaa3a, type: 3}
       propertyPath: m_Name
       value: Morida
+      objectReference: {fileID: 0}
+    - target: {fileID: 5328870854030324990, guid: 14a229b2e4680094bba03ec0510aaa3a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14a229b2e4680094bba03ec0510aaa3a, type: 3}

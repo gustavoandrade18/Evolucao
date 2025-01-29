@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Compania da pesada
+  companyName: DarkTail Studio
   productName: Adaptacao a evolucao
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -273,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 4a6e9c94ee0760f49856ee08fab418b6, type: 3}
+      m_Icon: {fileID: 0}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
